@@ -1,5 +1,16 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="ShowStudentForm">
+    <ShowStudentForm/>
   </div>
 </template>
+
+<script>
+import ShowStudentForm from '@/components/ShowStudentForm.vue'
+export default {
+  name: 'ShowStudent',
+  components: {
+    ShowStudentForm
+  }
+  
+}
+</script>

@@ -49,7 +49,7 @@
 
       async showCareers(){
         
-          await axios.get('192.241.158.156:8081/careers')
+          await axios.get('http://192.241.158.156:8081/career/getCareers')
           .then(res=>{
             this.careers = res.data.map(item => item.name)
           })
@@ -63,12 +63,12 @@
       async showStudents(){
       
           let allStudents
-          await axios.get('http://192.241.158.156:8081/student + {id}')
+          await axios.get('http://192.241.158.156:8081/student/{id}')
           .then(res=>{
             this.allStudents = res.data.map(item => item);
 
             allStudents.forEach(student => {
-              this.students.push(student.name,student.rut,student.bithDate );
+              this.students.push(student.name,student.rut,student.birthDate );
             })
           })
          

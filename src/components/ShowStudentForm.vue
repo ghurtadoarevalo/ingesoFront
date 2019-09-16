@@ -3,7 +3,7 @@
     <b-container >
       <b-card  class="col-md-12" align-self="center" bg-variant="light">
 
-        <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+        <b-form @submit="showStudents" @reset="onReset" v-if="show">
           
 
           <b-form-group id="input-group-4" label="Carreras:" label-for="input-4">
@@ -61,14 +61,29 @@
       },
 
       async showStudents(){
-      
-          let allStudents
-          await axios.get('http://192.241.158.156:8081/student/{id}')
+          this.students = []
+          let allStudents = null
+          let careerId = null
+          await axios.get('http://192.241.158.156:8081/career/getCareers')
           .then(res=>{
-            this.allStudents = res.data.map(item => item);
-
+            res.data.forEach(career => {
+              if(career.name == this.form.career){
+                careerId = career.careerId
+              }
+            });
+          })
+          .catch(function (error) {
+            console.log(error);
+          })
+          
+          await axios.get('http://192.241.158.156:8081/student/' + careerId)
+          .then(res=>{
+            allStudents = res.data.map(item => item);
+           
             allStudents.forEach(student => {
-              this.students.push(student.name,student.rut,student.birthDate );
+              this.students.push({Nombre:student.name, Rut: student.rut, Fecha_de_nacimiento: student.birthDate })
+               console.log(student.name)
+              ;
             })
           })
          

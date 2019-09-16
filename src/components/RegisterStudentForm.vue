@@ -93,8 +93,8 @@
           birthDate: this.form.date,
           career: this.form.career
         }
-             
-        await axios.post('http://192.241.158.156:8081/student/',newStudent)
+        console.log(newStudent)
+        await axios.post('http://192.241.158.156:8081/student',newStudent)
         .then(function (response) {
           currentObj.output = response.data;
         })

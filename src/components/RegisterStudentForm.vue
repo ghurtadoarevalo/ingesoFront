@@ -71,7 +71,7 @@
 
       async showCareers(){
     
-          await axios.get('http://192.241.158.156:8081/careers')
+          await axios.get('http://192.241.158.156:8081/career/getCareers')
           .then(res=>{
             this.careers = res.data.map(item => item.name)
               console.log(res.data)

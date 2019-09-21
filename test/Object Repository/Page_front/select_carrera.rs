@@ -9,8 +9,12 @@
          <key>XPATH</key>
          <value>//select[@id='input-4']</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@id = 'input-4' and (text() = 'Ingenieria AmbientalIngenieria ComercialIngenieria Civil en ElectricidadIngenieria Civil en Obras CivilesIngenieria en AlimentosIngenieria de Ejecucion en ElectricidadIngenieria de Ejecucion en Obras Civiles' or . = 'Ingenieria AmbientalIngenieria ComercialIngenieria Civil en ElectricidadIngenieria Civil en Obras CivilesIngenieria en AlimentosIngenieria de Ejecucion en ElectricidadIngenieria de Ejecucion en Obras Civiles')]</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

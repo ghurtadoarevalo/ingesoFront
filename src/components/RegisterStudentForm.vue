@@ -85,7 +85,6 @@
 
       async onSubmit(evt) {
         evt.preventDefault()
-        alert(JSON.stringify(this.form))
         let currentObj = this;
         let newStudent = {
           name: this.form.name,

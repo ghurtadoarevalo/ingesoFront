@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project>
-   <description>https://github.com/ghurtadoarevalo/ingesoFront</description>
-   <name>Mingeso</name>
+   <description>as</description>
+   <name>test_front</name>
    <tag></tag>
-   <UUID>27f1bf7f-4b31-4e1a-8296-d7f6ac6f87f5</UUID>
+   <UUID>5a90ade4-19b0-4e4d-adce-3d67c6cf45e9</UUID>
    <migratedVersion>5.9.0</migratedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
    <sourceContent>

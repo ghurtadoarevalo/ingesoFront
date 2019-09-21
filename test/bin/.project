@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>%home%nameless999%Katalon Studio%Mingeso%Mingeso.prj</name>
+	<name>%home%nameless999%Katalon Studio%test_front%test_front.prj</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -17,7 +17,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1569081547446</id>
+			<id>1569084952582</id>
 			<name></name>
 			<type>10</type>
 			<matcher>
@@ -26,7 +26,7 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1569081547449</id>
+			<id>1569084952584</id>
 			<name></name>
 			<type>6</type>
 			<matcher>

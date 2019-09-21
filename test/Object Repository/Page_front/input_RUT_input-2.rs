@@ -3,7 +3,7 @@
    <description></description>
    <name>input_RUT_input-2</name>
    <tag></tag>
-   <elementGuidId>741207ff-0686-49ad-afb8-81265146bd49</elementGuidId>
+   <elementGuidId>60ba49b6-01be-4c7b-b9e6-3048b695163b</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>

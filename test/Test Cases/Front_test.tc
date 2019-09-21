@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Probando ingrsar un alumno</description>
-   <name>Front_test</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>86fb933a-01a4-4a4f-acaa-d5ebe3be9a9e</testCaseGuid>
-</TestCaseEntity>

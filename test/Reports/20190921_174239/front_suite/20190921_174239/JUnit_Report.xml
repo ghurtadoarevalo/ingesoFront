@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<testsuites name="front_suite" time="23" tests="2" failures="1" errors="0">
+    <testsuite name="front_suite" tests="2" failures="1" errors="0" time="23" timestamp="2019-09-21 17:42:41" hostname="deCasa - host.docker.internal" id="Test Suites/front_suite">
+        <properties>
+            <property name="deviceName" value=""/>
+            <property name="devicePlatform" value=""/>
+            <property name="logFolder" value="C:\\Users\\elmat\\Documents\\ingesoFront\\test\\Reports\\20190921_174239\\front_suite\\20190921_174239"/>
+            <property name="logFiles" value="C:\\Users\\elmat\\Documents\\ingesoFront\\test\\Reports\\20190921_174239\\front_suite\\20190921_174239\\execution0.log"/>
+            <property name="attachments" value="C:\\Users\\elmat\\Documents\\ingesoFront\\test\\Reports\\20190921_174239\\front_suite\\20190921_174239\\1569098571324.png"/>
+            <property name="hostName" value="deCasa - host.docker.internal"/>
+            <property name="os" value="Windows 10 64bit"/>
+            <property name="katalonVersion" value="6.3.3.11"/>
+            <property name="browser" value="Chrome 77.0.3865.90"/>
+            <property name="hostAddress" value="192.168.0.15"/>
+            <property name="sessionId" value="77b0e39805cdf2b31ef1b8fac3c0a26a"/>
+            <property name="seleniumVersion" value="3.141.59"/>
+            <property name="proxyInformation" value="ProxyInformation{proxyOption=NO_PROXY, proxyServerType=HTTP, password=, proxyServerAddress=, proxyServerPort=0}"/>
+            <property name="platform" value="Windows 10"/>
+        </properties>
+        <testcase name="Test Cases/TestC" classname="Test Cases/TestC" status="FAILED">
+            <failure type="FAILED" message="Test Cases/TestC FAILED.&#xA;Reason:&#xA;com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/TestC/Page_front/a_Buscar'&#xD;&#xA;&#x9;at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)&#xD;&#xA;&#x9;at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)&#xD;&#xA;&#x9;at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)&#xD;&#xA;&#x9;at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)&#xD;&#xA;&#x9;at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)&#xD;&#xA;&#x9;at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)&#xD;&#xA;&#x9;at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)&#xD;&#xA;&#x9;at TestC.run(TestC:32)&#xD;&#xA;&#x9;at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)&#xD;&#xA;&#x9;at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)&#xD;&#xA;&#x9;at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:337)&#xD;&#xA;&#x9;at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:328)&#xD;&#xA;&#x9;at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:307)&#xD;&#xA;&#x9;at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:299)&#xD;&#xA;&#x9;at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:233)&#xD;&#xA;&#x9;at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:169)&#xD;&#xA;&#x9;at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:142)&#xD;&#xA;&#x9;at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:91)&#xD;&#xA;&#x9;at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)&#xD;&#xA;&#x9;at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)&#xD;&#xA;&#x9;at TempTestSuite1569098559197.run(TempTestSuite1569098559197.groovy:35)&#xD;&#xA;Caused by: org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : {&quot;name&quot;:&quot;Marcela Rosario&quot;,&quot;rut&quot;:&quot;19.313.452-2&quot;,&quot;date&quot;:&quot;10/01/1997&quot;,&quot;career&quot;:&quot;Ingenieria de Ejecucion en Obras Civiles&quot;,&quot;checked&quot;:[]}}&#xA;  (Session info: headless chrome=77.0.3865.90): {&quot;name&quot;:&quot;Marcela Rosario&quot;,&quot;rut&quot;:&quot;19.313.452-2&quot;,&quot;date&quot;:&quot;10/01/1997&quot;,&quot;career&quot;:&quot;Ingenieria de Ejecucion en Obras Civiles&quot;,&quot;checked&quot;:[]}&#xA;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'&#xA;System info: host: 'DESKTOP-1I95F98', ip: '192.168.0.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'&#xA;Driver info: com.kms.katalon.selenium.driver.CChromeDriver&#xA;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.90, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\elmat\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62292}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#xA;Session ID: 85925f2bf3a4ff1e0c4b489f9c775bd8&#xA;*** Element info: {Using=xpath, value=//div[@id='nav-collapse']/ul/li[2]/a}&#xD;&#xA;&#x9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)&#xD;&#xA;&#x9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#xD;&#xA;&#x9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#xD;&#xA;&#x9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#xD;&#xA;&#x9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#xD;&#xA;&#x9;at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:20)&#xD;&#xA;&#x9;at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:353)&#xD;&#xA;&#x9;at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:432)&#xD;&#xA;&#x9;at org.openqa.selenium.By$ByXPath.findElements(By.java:348)&#xD;&#xA;&#x9;at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:311)&#xD;&#xA;&#x9;at com.kms.katalon.core.webui.common.WebUiCommonHelper.findWebElements(WebUiCommonHelper.java:761)&#xD;&#xA;&#x9;at com.kms.katalon.core.webui.common.WebUiCommonHelper.findWebElement(WebUiCommonHelper.java:1093)&#xD;&#xA;&#x9;at com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword.findWebElement(WebUIAbstractKeyword.groovy:27)&#xD;&#xA;&#x9;at com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword.findWebElement(WebUIAbstractKeyword.groovy:26)&#xD;&#xA;&#x9;at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.doCall(ClickKeyword.groovy:77)&#xD;&#xA;&#x9;at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.call(ClickKeyword.groovy)&#xD;&#xA;&#x9;at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)&#xD;&#xA;&#x9;... 19 more&#xD;&#xA;"/>
+            <system-out>2019-09-21 17:42:41 - [TEST_CASE][FAILED] - Test Cases/TestC: Test Cases/TestC FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/TestC/Page_front/a_Buscar'&#xD;
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)&#xD;
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)&#xD;
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)&#xD;
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)&#xD;
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)&#xD;
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)&#xD;
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)&#xD;
+	at TestC.run(TestC:32)&#xD;
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)&#xD;
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)&#xD;
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:337)&#xD;
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:328)&#xD;
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:307)&#xD;
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:299)&#xD;
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:233)&#xD;
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:169)&#xD;
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:142)&#xD;
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:91)&#xD;
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)&#xD;
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)&#xD;
+	at TempTestSuite1569098559197.run(TempTestSuite1569098559197.groovy:35)&#xD;
+Caused by: org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : {"name":"Marcela Rosario","rut":"19.313.452-2","date":"10/01/1997","career":"Ingenieria de Ejecucion en Obras Civiles","checked":[]}}
+  (Session info: headless chrome=77.0.3865.90): {"name":"Marcela Rosario","rut":"19.313.452-2","date":"10/01/1997","career":"Ingenieria de Ejecucion en Obras Civiles","checked":[]}
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-1I95F98', ip: '192.168.0.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.90, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\elmat\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62292}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 85925f2bf3a4ff1e0c4b489f9c775bd8
+*** Element info: {Using=xpath, value=//div[@id='nav-collapse']/ul/li[2]/a}&#xD;
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)&#xD;
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#xD;
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#xD;
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#xD;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#xD;
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:20)&#xD;
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:353)&#xD;
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:432)&#xD;
+	at org.openqa.selenium.By$ByXPath.findElements(By.java:348)&#xD;
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:311)&#xD;
+	at com.kms.katalon.core.webui.common.WebUiCommonHelper.findWebElements(WebUiCommonHelper.java:761)&#xD;
+	at com.kms.katalon.core.webui.common.WebUiCommonHelper.findWebElement(WebUiCommonHelper.java:1093)&#xD;
+	at com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword.findWebElement(WebUIAbstractKeyword.groovy:27)&#xD;
+	at com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword.findWebElement(WebUIAbstractKeyword.groovy:26)&#xD;
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.doCall(ClickKeyword.groovy:77)&#xD;
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.call(ClickKeyword.groovy)&#xD;
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)&#xD;
+	... 19 more&#xD;
+&#xD;
+&#xD;
+2019-09-21 17:42:42 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''&#xD;
+&#xD;
+2019-09-21 17:42:42 - [MESSAGE][INFO] - Starting 'Chrome (headless)' driver&#xD;
+&#xD;
+2019-09-21 17:42:42 - [MESSAGE][INFO] - User set preference: ['args', '[--window-size=1024,768, --disable-dev-shm-usage, --no-sandbox]']&#xD;
+&#xD;
+2019-09-21 17:42:42 - [MESSAGE][INFO] - Action delay is set to 0 seconds&#xD;
+&#xD;
+2019-09-21 17:42:48 - [MESSAGE][PASSED] - Browser is opened with url: ''&#xD;
+&#xD;
+2019-09-21 17:42:48 - [TEST_STEP][PASSED] - navigateToUrl("http://192.241.158.156/#/"): Navigate to 'http://192.241.158.156/#/' successfully&#xD;
+&#xD;
+2019-09-21 17:42:50 - [MESSAGE][PASSED] - Navigate to 'http://192.241.158.156/#/' successfully&#xD;
+&#xD;
+2019-09-21 17:42:50 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/TestC/Page_front/input_Nombre completo_input-1"), "Marcela Rosario"): Text 'Marcela Rosario' is set on object 'Object Repository/TestC/Page_front/input_Nombre completo_input-1'&#xD;
+&#xD;
+2019-09-21 17:42:50 - [MESSAGE][PASSED] - Text 'Marcela Rosario' is set on object 'Object Repository/TestC/Page_front/input_Nombre completo_input-1'&#xD;
+&#xD;
+2019-09-21 17:42:50 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/TestC/Page_front/input_RUT_input-2"), "19.313.452-2"): Text '19.313.452-2' is set on object 'Object Repository/TestC/Page_front/input_RUT_input-2'&#xD;
+&#xD;
+2019-09-21 17:42:50 - [MESSAGE][PASSED] - Text '19.313.452-2' is set on object 'Object Repository/TestC/Page_front/input_RUT_input-2'&#xD;
+&#xD;
+2019-09-21 17:42:50 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/TestC/Page_front/input_Fecha de nacimiento_input-3"), "10/01/1997"): Text '10/01/1997' is set on object 'Object Repository/TestC/Page_front/input_Fecha de nacimiento_input-3'&#xD;
+&#xD;
+2019-09-21 17:42:50 - [MESSAGE][PASSED] - Text '10/01/1997' is set on object 'Object Repository/TestC/Page_front/input_Fecha de nacimiento_input-3'&#xD;
+&#xD;
+2019-09-21 17:42:50 - [TEST_STEP][PASSED] - selectOptionByValue(findTestObject("Object Repository/TestC/Page_front/select_Ingenieria"), "Ingenieria de Ejecucion en Obras Civiles", true): All options with value 'Ingenieria de Ejecucion en Obras Civiles' are selected in object 'Object Repository/TestC/Page_front/select_Ingenieria'  using regular expression&#xD;
+&#xD;
+2019-09-21 17:42:51 - [MESSAGE][PASSED] - All options with value 'Ingenieria de Ejecucion en Obras Civiles' are selected in object 'Object Repository/TestC/Page_front/select_Ingenieria'  using regular expression&#xD;
+&#xD;
+2019-09-21 17:42:51 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/TestC/Page_front/button_Registrar")): Object: 'Object Repository/TestC/Page_front/button_Registrar' is clicked on&#xD;
+&#xD;
+2019-09-21 17:42:51 - [MESSAGE][PASSED] - Object: 'Object Repository/TestC/Page_front/button_Registrar' is clicked on&#xD;
+&#xD;
+2019-09-21 17:42:51 - [TEST_STEP][FAILED] - click(findTestObject("Object Repository/TestC/Page_front/a_Buscar")): Unable to click on object 'Object Repository/TestC/Page_front/a_Buscar' (Root cause: com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/TestC/Page_front/a_Buscar'&#xD;
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)&#xD;
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)&#xD;
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)&#xD;
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)&#xD;
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)&#xD;
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)&#xD;
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)&#xD;
+	at TestC.run(TestC:32)&#xD;
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)&#xD;
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)&#xD;
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:337)&#xD;
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:328)&#xD;
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:307)&#xD;
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:299)&#xD;
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:233)&#xD;
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:169)&#xD;
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:142)&#xD;
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:91)&#xD;
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)&#xD;
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)&#xD;
+	at TempTestSuite1569098559197.run(TempTestSuite1569098559197.groovy:35)&#xD;
+Caused by: org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : {"name":"Marcela Rosario","rut":"19.313.452-2","date":"10/01/1997","career":"Ingenieria de Ejecucion en Obras Civiles","checked":[]}}
+  (Session info: headless chrome=77.0.3865.90): {"name":"Marcela Rosario","rut":"19.313.452-2","date":"10/01/1997","career":"Ingenieria de Ejecucion en Obras Civiles","checked":[]}
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-1I95F98', ip: '192.168.0.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.90, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\elmat\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62292}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 85925f2bf3a4ff1e0c4b489f9c775bd8
+*** Element info: {Using=xpath, value=//div[@id='nav-collapse']/ul/li[2]/a}&#xD;
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)&#xD;
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#xD;
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#xD;
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#xD;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#xD;
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:20)&#xD;
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:353)&#xD;
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:432)&#xD;
+	at org.openqa.selenium.By$ByXPath.findElements(By.java:348)&#xD;
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:311)&#xD;
+	at com.kms.katalon.core.webui.common.WebUiCommonHelper.findWebElements(WebUiCommonHelper.java:761)&#xD;
+	at com.kms.katalon.core.webui.common.WebUiCommonHelper.findWebElement(WebUiCommonHelper.java:1093)&#xD;
+	at com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword.findWebElement(WebUIAbstractKeyword.groovy:27)&#xD;
+	at com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword.findWebElement(WebUIAbstractKeyword.groovy:26)&#xD;
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.doCall(ClickKeyword.groovy:77)&#xD;
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.call(ClickKeyword.groovy)&#xD;
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)&#xD;
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)&#xD;
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)&#xD;
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)&#xD;
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)&#xD;
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)&#xD;
+	at Script1569098423828.run(Script1569098423828.groovy:32)&#xD;
+	... 13 more&#xD;
+)&#xD;
+&#xD;
+2019-09-21 17:42:51 - [MESSAGE][FAILED] - Unable to click on object 'Object Repository/TestC/Page_front/a_Buscar' (Root cause: com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/TestC/Page_front/a_Buscar'&#xD;
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)&#xD;
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)&#xD;
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)&#xD;
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)&#xD;
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)&#xD;
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)&#xD;
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)&#xD;
+	at TestC.run(TestC:32)&#xD;
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)&#xD;
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)&#xD;
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:337)&#xD;
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:328)&#xD;
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:307)&#xD;
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:299)&#xD;
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:233)&#xD;
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:169)&#xD;
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:142)&#xD;
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:91)&#xD;
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)&#xD;
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)&#xD;
+	at TempTestSuite1569098559197.run(TempTestSuite1569098559197.groovy:35)&#xD;
+Caused by: org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : {"name":"Marcela Rosario","rut":"19.313.452-2","date":"10/01/1997","career":"Ingenieria de Ejecucion en Obras Civiles","checked":[]}}
+  (Session info: headless chrome=77.0.3865.90): {"name":"Marcela Rosario","rut":"19.313.452-2","date":"10/01/1997","career":"Ingenieria de Ejecucion en Obras Civiles","checked":[]}
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-1I95F98', ip: '192.168.0.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.90, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\elmat\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62292}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 85925f2bf3a4ff1e0c4b489f9c775bd8
+*** Element info: {Using=xpath, value=//div[@id='nav-collapse']/ul/li[2]/a}&#xD;
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)&#xD;
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#xD;
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#xD;
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#xD;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#xD;
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:20)&#xD;
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:353)&#xD;
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:432)&#xD;
+	at org.openqa.selenium.By$ByXPath.findElements(By.java:348)&#xD;
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:311)&#xD;
+	at com.kms.katalon.core.webui.common.WebUiCommonHelper.findWebElements(WebUiCommonHelper.java:761)&#xD;
+	at com.kms.katalon.core.webui.common.WebUiCommonHelper.findWebElement(WebUiCommonHelper.java:1093)&#xD;
+	at com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword.findWebElement(WebUIAbstractKeyword.groovy:27)&#xD;
+	at com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword.findWebElement(WebUIAbstractKeyword.groovy:26)&#xD;
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.doCall(ClickKeyword.groovy:77)&#xD;
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.call(ClickKeyword.groovy)&#xD;
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)&#xD;
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)&#xD;
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)&#xD;
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)&#xD;
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)&#xD;
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)&#xD;
+	at Script1569098423828.run(Script1569098423828.groovy:32)&#xD;
+	... 13 more&#xD;
+)&#xD;
+[[ATTACHMENT|C:\\Users\\elmat\\Documents\\ingesoFront\\test\\Reports\\20190921_174239\\front_suite\\20190921_174239\\1569098571324.png]]</system-out>
+            <system-err>2019-09-21 17:42:41 - [TEST_CASE][FAILED] - Test Cases/TestC: Test Cases/TestC FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/TestC/Page_front/a_Buscar'&#xD;
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)&#xD;
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)&#xD;
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)&#xD;
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)&#xD;
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)&#xD;
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)&#xD;
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)&#xD;
+	at TestC.run(TestC:32)&#xD;
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)&#xD;
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)&#xD;
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:337)&#xD;
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:328)&#xD;
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:307)&#xD;
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:299)&#xD;
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:233)&#xD;
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:169)&#xD;
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:142)&#xD;
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:91)&#xD;
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)&#xD;
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)&#xD;
+	at TempTestSuite1569098559197.run(TempTestSuite1569098559197.groovy:35)&#xD;
+Caused by: org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : {"name":"Marcela Rosario","rut":"19.313.452-2","date":"10/01/1997","career":"Ingenieria de Ejecucion en Obras Civiles","checked":[]}}
+  (Session info: headless chrome=77.0.3865.90): {"name":"Marcela Rosario","rut":"19.313.452-2","date":"10/01/1997","career":"Ingenieria de Ejecucion en Obras Civiles","checked":[]}
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-1I95F98', ip: '192.168.0.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.90, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\elmat\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62292}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 85925f2bf3a4ff1e0c4b489f9c775bd8
+*** Element info: {Using=xpath, value=//div[@id='nav-collapse']/ul/li[2]/a}&#xD;
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)&#xD;
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#xD;
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#xD;
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#xD;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#xD;
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:20)&#xD;
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:353)&#xD;
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:432)&#xD;
+	at org.openqa.selenium.By$ByXPath.findElements(By.java:348)&#xD;
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:311)&#xD;
+	at com.kms.katalon.core.webui.common.WebUiCommonHelper.findWebElements(WebUiCommonHelper.java:761)&#xD;
+	at com.kms.katalon.core.webui.common.WebUiCommonHelper.findWebElement(WebUiCommonHelper.java:1093)&#xD;
+	at com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword.findWebElement(WebUIAbstractKeyword.groovy:27)&#xD;
+	at com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword.findWebElement(WebUIAbstractKeyword.groovy:26)&#xD;
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.doCall(ClickKeyword.groovy:77)&#xD;
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.call(ClickKeyword.groovy)&#xD;
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)&#xD;
+	... 19 more</system-err>
+        </testcase>
+        <testcase name="Test Cases/TestB" classname="Test Cases/TestB" status="PASSED">
+            <system-out>2019-09-21 17:42:51 - [TEST_CASE][PASSED] - Test Cases/TestB: Test Cases/TestB&#xD;
+&#xD;
+2019-09-21 17:42:51 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''&#xD;
+&#xD;
+2019-09-21 17:42:51 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one&#xD;
+&#xD;
+2019-09-21 17:42:52 - [MESSAGE][INFO] - Starting 'Chrome (headless)' driver&#xD;
+&#xD;
+2019-09-21 17:42:52 - [MESSAGE][INFO] - User set preference: ['args', '[--window-size=1024,768, --disable-dev-shm-usage, --no-sandbox]']&#xD;
+&#xD;
+2019-09-21 17:42:54 - [MESSAGE][PASSED] - Browser is opened with url: ''&#xD;
+&#xD;
+2019-09-21 17:42:54 - [TEST_STEP][PASSED] - navigateToUrl("http://192.241.158.156/#/"): Navigate to 'http://192.241.158.156/#/' successfully&#xD;
+&#xD;
+2019-09-21 17:42:57 - [MESSAGE][PASSED] - Navigate to 'http://192.241.158.156/#/' successfully&#xD;
+&#xD;
+2019-09-21 17:42:57 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/TestB/Page_front/input_Nombre completo_input-1"), "Matias Calderon"): Text 'Matias Calderon' is set on object 'Object Repository/TestB/Page_front/input_Nombre completo_input-1'&#xD;
+&#xD;
+2019-09-21 17:42:58 - [MESSAGE][PASSED] - Text 'Matias Calderon' is set on object 'Object Repository/TestB/Page_front/input_Nombre completo_input-1'&#xD;
+&#xD;
+2019-09-21 17:42:58 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/TestB/Page_front/input_RUT_input-2"), "19.231.324-k"): Text '19.231.324-k' is set on object 'Object Repository/TestB/Page_front/input_RUT_input-2'&#xD;
+&#xD;
+2019-09-21 17:42:58 - [MESSAGE][PASSED] - Text '19.231.324-k' is set on object 'Object Repository/TestB/Page_front/input_RUT_input-2'&#xD;
+&#xD;
+2019-09-21 17:42:58 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/TestB/Page_front/input_Fecha de nacimiento_input-3"), "10/10/1992"): Text '10/10/1992' is set on object 'Object Repository/TestB/Page_front/input_Fecha de nacimiento_input-3'&#xD;
+&#xD;
+2019-09-21 17:42:58 - [MESSAGE][PASSED] - Text '10/10/1992' is set on object 'Object Repository/TestB/Page_front/input_Fecha de nacimiento_input-3'&#xD;
+&#xD;
+2019-09-21 17:42:58 - [TEST_STEP][PASSED] - selectOptionByValue(findTestObject("Object Repository/TestB/Page_front/select_Ingenieria"), "Ingenieria en Alimentos", true): All options with value 'Ingenieria en Alimentos' are selected in object 'Object Repository/TestB/Page_front/select_Ingenieria'  using regular expression&#xD;
+&#xD;
+2019-09-21 17:42:58 - [MESSAGE][PASSED] - All options with value 'Ingenieria en Alimentos' are selected in object 'Object Repository/TestB/Page_front/select_Ingenieria'  using regular expression&#xD;
+&#xD;
+2019-09-21 17:42:58 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/TestB/Page_front/button_Registrar")): Object: 'Object Repository/TestB/Page_front/button_Registrar' is clicked on&#xD;
+&#xD;
+2019-09-21 17:42:58 - [MESSAGE][PASSED] - Object: 'Object Repository/TestB/Page_front/button_Registrar' is clicked on&#xD;
+&#xD;
+2019-09-21 17:42:58 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed&#xD;
+&#xD;
+2019-09-21 17:42:59 - [MESSAGE][PASSED] - Browser is closed</system-out>
+            <system-err></system-err>
+        </testcase>
+        <testcase name="Test Cases/TestA" classname="Test Cases/TestA" status="PASSED">
+            <system-out>2019-09-21 17:42:59 - [TEST_CASE][PASSED] - Test Cases/TestA: Test Cases/TestA&#xD;
+&#xD;
+2019-09-21 17:42:59 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''&#xD;
+&#xD;
+2019-09-21 17:42:59 - [MESSAGE][INFO] - Starting 'Chrome (headless)' driver&#xD;
+&#xD;
+2019-09-21 17:42:59 - [MESSAGE][INFO] - User set preference: ['args', '[--window-size=1024,768, --disable-dev-shm-usage, --no-sandbox]']&#xD;
+&#xD;
+2019-09-21 17:43:01 - [MESSAGE][PASSED] - Browser is opened with url: ''&#xD;
+&#xD;
+2019-09-21 17:43:01 - [TEST_STEP][PASSED] - navigateToUrl("http://192.241.158.156/#/"): Navigate to 'http://192.241.158.156/#/' successfully&#xD;
+&#xD;
+2019-09-21 17:43:03 - [MESSAGE][PASSED] - Navigate to 'http://192.241.158.156/#/' successfully&#xD;
+&#xD;
+2019-09-21 17:43:03 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/TestA/Page_front/a_Buscar")): Object: 'Object Repository/TestA/Page_front/a_Buscar' is clicked on&#xD;
+&#xD;
+2019-09-21 17:43:03 - [MESSAGE][PASSED] - Object: 'Object Repository/TestA/Page_front/a_Buscar' is clicked on&#xD;
+&#xD;
+2019-09-21 17:43:03 - [TEST_STEP][PASSED] - selectOptionByValue(findTestObject("Object Repository/TestA/Page_front/select_Ingenieria"), "Ingenieria Comercial", true): All options with value 'Ingenieria Comercial' are selected in object 'Object Repository/TestA/Page_front/select_Ingenieria'  using regular expression&#xD;
+&#xD;
+2019-09-21 17:43:04 - [MESSAGE][PASSED] - All options with value 'Ingenieria Comercial' are selected in object 'Object Repository/TestA/Page_front/select_Ingenieria'  using regular expression&#xD;
+&#xD;
+2019-09-21 17:43:04 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/TestA/Page_front/button_Buscar")): Object: 'Object Repository/TestA/Page_front/button_Buscar' is clicked on&#xD;
+&#xD;
+2019-09-21 17:43:04 - [MESSAGE][PASSED] - Object: 'Object Repository/TestA/Page_front/button_Buscar' is clicked on&#xD;
+&#xD;
+2019-09-21 17:43:04 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed&#xD;
+&#xD;
+2019-09-21 17:43:05 - [MESSAGE][PASSED] - Browser is closed</system-out>
+            <system-err></system-err>
+        </testcase>
+        <system-out>2019-09-21 17:42:41 - [TEST_SUITE][INCOMPLETE] - front_suite: null</system-out>
+        <system-err>2019-09-21 17:42:41 - [TEST_SUITE][INCOMPLETE] - front_suite: null</system-err>
+    </testsuite>
+</testsuites>

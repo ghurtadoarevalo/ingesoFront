@@ -18,18 +18,16 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://192.241.158.156/#/')
 
-WebUI.click(findTestObject('Page_front/form_carrera'))
+WebUI.setText(findTestObject('Object Repository/TestB/Page_front/input_Nombre completo_input-1'), 'Matias Calderon')
 
-WebUI.setText(findTestObject('Page_front/input_Nombre completo_input-1'), 'Pedro Perez')
+WebUI.setText(findTestObject('Object Repository/TestB/Page_front/input_RUT_input-2'), '19.231.324-k')
 
-WebUI.setText(findTestObject('Page_front/input_RUT_input-2'), '12.231.123-2')
+WebUI.setText(findTestObject('Object Repository/TestB/Page_front/input_Fecha de nacimiento_input-3'), '10/10/1992')
 
-WebUI.setText(findTestObject('Page_front/input_Fecha de nacimiento_input-3'), '12/02/1990')
-
-WebUI.selectOptionByValue(findTestObject('Object Repository/Page_front/select_carrera'), 'Ingenieria Civil en Obras Civiles', 
+WebUI.selectOptionByValue(findTestObject('Object Repository/TestB/Page_front/select_Ingenieria'), 'Ingenieria en Alimentos', 
     true)
 
-WebUI.click(findTestObject('Object Repository/Page_front/button_Registrar'))
+WebUI.click(findTestObject('Object Repository/TestB/Page_front/button_Registrar'))
 
 WebUI.closeBrowser()
 

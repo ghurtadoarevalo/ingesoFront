@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>TestA</name>
+   <name>TestB</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>4a87aab5-c2e8-424a-9ff1-1add7f1975b6</testCaseGuid>
+   <testCaseGuid>0fd4a093-1b95-4dd5-81be-8105ed9beee0</testCaseGuid>
 </TestCaseEntity>

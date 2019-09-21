@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>select_carrera</name>
+   <name>select_Ingenieria</name>
    <tag></tag>
-   <elementGuidId>c61d1605-638f-4730-a9ca-01fb285cd4dc</elementGuidId>
+   <elementGuidId>9910214c-a229-40c4-9bc6-32b9649820e7</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>

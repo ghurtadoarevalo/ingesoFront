@@ -1,0 +1,17 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+front_suite,Chrome 77.0.3865.90,,,2019-09-21 17:15:57,2019-09-21 17:16:12,"14,987s",INCOMPLETE
+,,,,,,,
+Test Cases/TestA,Chrome 77.0.3865.90,,,2019-09-21 17:15:57,2019-09-21 17:16:07,"9,813s",FAILED
+"openBrowser("""")",Chrome 77.0.3865.90,,,2019-09-21 17:15:58,2019-09-21 17:16:04,"6,245s",PASSED
+"navigateToUrl(""http://192.241.158.156/#/"")",Chrome 77.0.3865.90,,,2019-09-21 17:16:04,2019-09-21 17:16:06,"1,714s",PASSED
+"setText(findTestObject(""Object Repository/TestA_Folder/Page_front/input_Nombre completo_input-1""), ""Juan Perez"")",Chrome 77.0.3865.90,,,2019-09-21 17:16:06,2019-09-21 17:16:06,"0,270s",PASSED
+"setText(findTestObject(""Object Repository/TestA_Folder/Page_front/input_RUT_input-2""), ""19.203.184-k"")",Chrome 77.0.3865.90,,,2019-09-21 17:16:06,2019-09-21 17:16:06,"0,211s",PASSED
+"setText(findTestObject(""Object Repository/TestA_Folder/Page_front/input_Fecha de nacimiento_input-3""), ""10/10/1992"")",Chrome 77.0.3865.90,,,2019-09-21 17:16:06,2019-09-21 17:16:06,"0,186s",PASSED
+"selectOptionByValue(findTestObject(""Object Repository/TestA_Folder/Page_front/select_IngenieriaAmbiental""), ""Ingenieria Comercial"", true)",Chrome 77.0.3865.90,,,2019-09-21 17:16:06,2019-09-21 17:16:07,"0,287s",PASSED
+"click(findTestObject(""Object Repository/TestA_Folder/Page_front/button_Registrar""))",Chrome 77.0.3865.90,,,2019-09-21 17:16:07,2019-09-21 17:16:07,"0,134s",PASSED
+"click(findTestObject(""Object Repository/TestA_Folder/Page_front/span_miTingeso_navbar-toggler-icon""))",Chrome 77.0.3865.90,,,2019-09-21 17:16:07,2019-09-21 17:16:07,"0,377s",FAILED
+,,,,,,,
+Test Cases/TestB,Chrome 77.0.3865.90,,,2019-09-21 17:16:07,2019-09-21 17:16:12,"4,897s",FAILED
+"openBrowser("""")",Chrome 77.0.3865.90,,,2019-09-21 17:16:08,2019-09-21 17:16:10,"2,654s",PASSED
+"navigateToUrl(""http://192.241.158.156/#/"")",Chrome 77.0.3865.90,,,2019-09-21 17:16:10,2019-09-21 17:16:12,"1,589s",PASSED
+"click(findTestObject(""Object Repository/TestB_Folder/Page_front/span_miTingeso_navbar-toggler-icon""))",Chrome 77.0.3865.90,,,2019-09-21 17:16:12,2019-09-21 17:16:12,"0,350s",FAILED

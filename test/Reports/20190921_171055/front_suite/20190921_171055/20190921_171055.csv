@@ -1,0 +1,13 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+front_suite,Chrome 77.0.3865.90,,,2019-09-21 17:10:57,2019-09-21 17:11:07,"10,320s",INCOMPLETE
+,,,,,,,
+Test Cases/TestA,Chrome 77.0.3865.90,Probando lo básico,,2019-09-21 17:10:57,2019-09-21 17:11:07,"10,015s",PASSED
+"openBrowser("""")",Chrome 77.0.3865.90,,,2019-09-21 17:10:58,2019-09-21 17:11:04,"6,249s",PASSED
+"navigateToUrl(""http://192.241.158.156/#/"")",Chrome 77.0.3865.90,,,2019-09-21 17:11:04,2019-09-21 17:11:06,"1,616s",PASSED
+"click(findTestObject(""Page_front/form_carrera""))",Chrome 77.0.3865.90,,,2019-09-21 17:11:06,2019-09-21 17:11:06,"0,183s",PASSED
+"setText(findTestObject(""Page_front/input_Nombre completo_input-1""), ""Pedro Perez"")",Chrome 77.0.3865.90,,,2019-09-21 17:11:06,2019-09-21 17:11:06,"0,216s",PASSED
+"setText(findTestObject(""Page_front/input_RUT_input-2""), ""12.231.123-2"")",Chrome 77.0.3865.90,,,2019-09-21 17:11:06,2019-09-21 17:11:06,"0,193s",PASSED
+"setText(findTestObject(""Page_front/input_Fecha de nacimiento_input-3""), ""12/02/1990"")",Chrome 77.0.3865.90,,,2019-09-21 17:11:06,2019-09-21 17:11:06,"0,188s",PASSED
+"selectOptionByValue(findTestObject(""Object Repository/Page_front/select_carrera""), ""Ingenieria Civil en Obras Civiles"", true)",Chrome 77.0.3865.90,,,2019-09-21 17:11:06,2019-09-21 17:11:07,"0,299s",PASSED
+"click(findTestObject(""Object Repository/Page_front/button_Registrar""))",Chrome 77.0.3865.90,,,2019-09-21 17:11:07,2019-09-21 17:11:07,"0,136s",PASSED
+closeBrowser(),Chrome 77.0.3865.90,,,2019-09-21 17:11:07,2019-09-21 17:11:07,"0,575s",PASSED

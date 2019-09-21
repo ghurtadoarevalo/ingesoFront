@@ -1,0 +1,30 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+front_suite,Chrome 77.0.3865.90,,,2019-09-21 17:42:41,2019-09-21 17:43:05,"23,766s",INCOMPLETE
+,,,,,,,
+Test Cases/TestC,Chrome 77.0.3865.90,,,2019-09-21 17:42:41,2019-09-21 17:42:51,"9,852s",FAILED
+"openBrowser("""")",Chrome 77.0.3865.90,,,2019-09-21 17:42:42,2019-09-21 17:42:48,"6,254s",PASSED
+"navigateToUrl(""http://192.241.158.156/#/"")",Chrome 77.0.3865.90,,,2019-09-21 17:42:48,2019-09-21 17:42:50,"1,656s",PASSED
+"setText(findTestObject(""Object Repository/TestC/Page_front/input_Nombre completo_input-1""), ""Marcela Rosario"")",Chrome 77.0.3865.90,,,2019-09-21 17:42:50,2019-09-21 17:42:50,"0,305s",PASSED
+"setText(findTestObject(""Object Repository/TestC/Page_front/input_RUT_input-2""), ""19.313.452-2"")",Chrome 77.0.3865.90,,,2019-09-21 17:42:50,2019-09-21 17:42:50,"0,201s",PASSED
+"setText(findTestObject(""Object Repository/TestC/Page_front/input_Fecha de nacimiento_input-3""), ""10/01/1997"")",Chrome 77.0.3865.90,,,2019-09-21 17:42:50,2019-09-21 17:42:50,"0,176s",PASSED
+"selectOptionByValue(findTestObject(""Object Repository/TestC/Page_front/select_Ingenieria""), ""Ingenieria de Ejecucion en Obras Civiles"", true)",Chrome 77.0.3865.90,,,2019-09-21 17:42:50,2019-09-21 17:42:51,"0,295s",PASSED
+"click(findTestObject(""Object Repository/TestC/Page_front/button_Registrar""))",Chrome 77.0.3865.90,,,2019-09-21 17:42:51,2019-09-21 17:42:51,"0,141s",PASSED
+"click(findTestObject(""Object Repository/TestC/Page_front/a_Buscar""))",Chrome 77.0.3865.90,,,2019-09-21 17:42:51,2019-09-21 17:42:51,"0,377s",FAILED
+,,,,,,,
+Test Cases/TestB,Chrome 77.0.3865.90,,,2019-09-21 17:42:51,2019-09-21 17:42:59,"7,743s",PASSED
+"openBrowser("""")",Chrome 77.0.3865.90,,,2019-09-21 17:42:51,2019-09-21 17:42:54,"2,651s",PASSED
+"navigateToUrl(""http://192.241.158.156/#/"")",Chrome 77.0.3865.90,,,2019-09-21 17:42:54,2019-09-21 17:42:57,"3,232s",PASSED
+"setText(findTestObject(""Object Repository/TestB/Page_front/input_Nombre completo_input-1""), ""Matias Calderon"")",Chrome 77.0.3865.90,,,2019-09-21 17:42:57,2019-09-21 17:42:58,"0,223s",PASSED
+"setText(findTestObject(""Object Repository/TestB/Page_front/input_RUT_input-2""), ""19.231.324-k"")",Chrome 77.0.3865.90,,,2019-09-21 17:42:58,2019-09-21 17:42:58,"0,197s",PASSED
+"setText(findTestObject(""Object Repository/TestB/Page_front/input_Fecha de nacimiento_input-3""), ""10/10/1992"")",Chrome 77.0.3865.90,,,2019-09-21 17:42:58,2019-09-21 17:42:58,"0,177s",PASSED
+"selectOptionByValue(findTestObject(""Object Repository/TestB/Page_front/select_Ingenieria""), ""Ingenieria en Alimentos"", true)",Chrome 77.0.3865.90,,,2019-09-21 17:42:58,2019-09-21 17:42:58,"0,267s",PASSED
+"click(findTestObject(""Object Repository/TestB/Page_front/button_Registrar""))",Chrome 77.0.3865.90,,,2019-09-21 17:42:58,2019-09-21 17:42:58,"0,138s",PASSED
+closeBrowser(),Chrome 77.0.3865.90,,,2019-09-21 17:42:58,2019-09-21 17:42:59,"0,569s",PASSED
+,,,,,,,
+Test Cases/TestA,Chrome 77.0.3865.90,,,2019-09-21 17:42:59,2019-09-21 17:43:05,"5,877s",PASSED
+"openBrowser("""")",Chrome 77.0.3865.90,,,2019-09-21 17:42:59,2019-09-21 17:43:01,"2,085s",PASSED
+"navigateToUrl(""http://192.241.158.156/#/"")",Chrome 77.0.3865.90,,,2019-09-21 17:43:01,2019-09-21 17:43:03,"1,716s",PASSED
+"click(findTestObject(""Object Repository/TestA/Page_front/a_Buscar""))",Chrome 77.0.3865.90,,,2019-09-21 17:43:03,2019-09-21 17:43:03,"0,142s",PASSED
+"selectOptionByValue(findTestObject(""Object Repository/TestA/Page_front/select_Ingenieria""), ""Ingenieria Comercial"", true)",Chrome 77.0.3865.90,,,2019-09-21 17:43:03,2019-09-21 17:43:04,"0,748s",PASSED
+"click(findTestObject(""Object Repository/TestA/Page_front/button_Buscar""))",Chrome 77.0.3865.90,,,2019-09-21 17:43:04,2019-09-21 17:43:04,"0,359s",PASSED
+closeBrowser(),Chrome 77.0.3865.90,,,2019-09-21 17:43:04,2019-09-21 17:43:05,"0,562s",PASSED

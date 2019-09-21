@@ -1,0 +1,30 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+front_suite,Chrome 77.0.3865.90,,,2019-09-21 17:12:08,2019-09-21 17:12:29,"21,202s",INCOMPLETE
+,,,,,,,
+Test Cases/TestA,Chrome 77.0.3865.90,Probando lo básico,,2019-09-21 17:12:08,2019-09-21 17:12:18,"10,163s",PASSED
+"openBrowser("""")",Chrome 77.0.3865.90,,,2019-09-21 17:12:09,2019-09-21 17:12:15,"6,324s",PASSED
+"navigateToUrl(""http://192.241.158.156/#/"")",Chrome 77.0.3865.90,,,2019-09-21 17:12:15,2019-09-21 17:12:17,"1,643s",PASSED
+"click(findTestObject(""Page_front/form_carrera""))",Chrome 77.0.3865.90,,,2019-09-21 17:12:17,2019-09-21 17:12:17,"0,191s",PASSED
+"setText(findTestObject(""Page_front/input_Nombre completo_input-1""), ""Pedro Perez"")",Chrome 77.0.3865.90,,,2019-09-21 17:12:17,2019-09-21 17:12:17,"0,230s",PASSED
+"setText(findTestObject(""Page_front/input_RUT_input-2""), ""12.231.123-2"")",Chrome 77.0.3865.90,,,2019-09-21 17:12:17,2019-09-21 17:12:17,"0,209s",PASSED
+"setText(findTestObject(""Page_front/input_Fecha de nacimiento_input-3""), ""12/02/1990"")",Chrome 77.0.3865.90,,,2019-09-21 17:12:17,2019-09-21 17:12:17,"0,176s",PASSED
+"selectOptionByValue(findTestObject(""Object Repository/Page_front/select_carrera""), ""Ingenieria Civil en Obras Civiles"", true)",Chrome 77.0.3865.90,,,2019-09-21 17:12:17,2019-09-21 17:12:18,"0,306s",PASSED
+"click(findTestObject(""Object Repository/Page_front/button_Registrar""))",Chrome 77.0.3865.90,,,2019-09-21 17:12:18,2019-09-21 17:12:18,"0,133s",PASSED
+closeBrowser(),Chrome 77.0.3865.90,,,2019-09-21 17:12:18,2019-09-21 17:12:18,"0,567s",PASSED
+,,,,,,,
+Test Cases/TestB,Chrome 77.0.3865.90,,,2019-09-21 17:12:18,2019-09-21 17:12:24,"5,732s",FAILED
+"openBrowser("""")",Chrome 77.0.3865.90,,,2019-09-21 17:12:19,2019-09-21 17:12:21,"2,135s",PASSED
+"navigateToUrl(""http://192.241.158.156/#/"")",Chrome 77.0.3865.90,,,2019-09-21 17:12:21,2019-09-21 17:12:23,"1,740s",PASSED
+"click(findTestObject(""Object Repository/Page_front/div_Nombre completo""))",Chrome 77.0.3865.90,,,2019-09-21 17:12:23,2019-09-21 17:12:23,"0,128s",PASSED
+"setText(findTestObject(""Page_front/input_Nombre completo_input-1""), ""Tomas Hurtado"")",Chrome 77.0.3865.90,,,2019-09-21 17:12:23,2019-09-21 17:12:23,"0,212s",PASSED
+"click(findTestObject(""Object Repository/Page_front/label_Fecha de nacimiento""))",Chrome 77.0.3865.90,,,2019-09-21 17:12:23,2019-09-21 17:12:23,"0,116s",PASSED
+"setText(findTestObject(""Page_front/input_RUT_input-2""), ""19.204.123-7"")",Chrome 77.0.3865.90,,,2019-09-21 17:12:23,2019-09-21 17:12:23,"0,194s",PASSED
+"setText(findTestObject(""Page_front/input_Fecha de nacimiento_input-3""), ""10/10/1910"")",Chrome 77.0.3865.90,,,2019-09-21 17:12:23,2019-09-21 17:12:23,"0,175s",PASSED
+"selectOptionByValue(findTestObject(""Object Repository/Page_front/select_carrera_ingenieria""), ""Ingenieria Comercial"", true)",Chrome 77.0.3865.90,,,2019-09-21 17:12:23,2019-09-21 17:12:24,"0,239s",PASSED
+"click(findTestObject(""Page_front/button_Registrar""))",Chrome 77.0.3865.90,,,2019-09-21 17:12:24,2019-09-21 17:12:24,"0,135s",PASSED
+"click(findTestObject(""Object Repository/Page_front/div_buscar""))",Chrome 77.0.3865.90,,,2019-09-21 17:12:24,2019-09-21 17:12:24,"0,374s",FAILED
+,,,,,,,
+Test Cases/TestC,Chrome 77.0.3865.90,,,2019-09-21 17:12:24,2019-09-21 17:12:29,"5,038s",FAILED
+"openBrowser("""")",Chrome 77.0.3865.90,,,2019-09-21 17:12:25,2019-09-21 17:12:27,"2,679s",PASSED
+"navigateToUrl(""http://192.241.158.156/#/"")",Chrome 77.0.3865.90,,,2019-09-21 17:12:27,2019-09-21 17:12:29,"1,603s",PASSED
+"click(findTestObject(""Object Repository/Page_front/button_miTingeso_navbar-toggler""))",Chrome 77.0.3865.90,,,2019-09-21 17:12:29,2019-09-21 17:12:29,"0,338s",FAILED

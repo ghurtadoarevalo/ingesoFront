@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<testsuites name="front_suite" time="12" tests="2" failures="0" errors="0">
+    <testsuite name="front_suite" tests="2" failures="0" errors="0" time="12" timestamp="2019-09-21 17:57:36" hostname="deCasa - host.docker.internal" id="Test Suites/front_suite">
+        <properties>
+            <property name="deviceName" value=""/>
+            <property name="devicePlatform" value=""/>
+            <property name="logFolder" value="C:\\Users\\elmat\\Documents\\ingesoFront\\test\\Reports\\20190921_175734\\front_suite\\20190921_175734"/>
+            <property name="logFiles" value="C:\\Users\\elmat\\Documents\\ingesoFront\\test\\Reports\\20190921_175734\\front_suite\\20190921_175734\\execution0.log"/>
+            <property name="attachments" value=""/>
+            <property name="hostName" value="deCasa - host.docker.internal"/>
+            <property name="os" value="Windows 10 64bit"/>
+            <property name="katalonVersion" value="6.3.3.11"/>
+            <property name="browser" value="Chrome 77.0.3865.90"/>
+            <property name="hostAddress" value="192.168.0.15"/>
+            <property name="sessionId" value="853dbd84ef38595d4abc441284844609"/>
+            <property name="seleniumVersion" value="3.141.59"/>
+            <property name="proxyInformation" value="ProxyInformation{proxyOption=NO_PROXY, proxyServerType=HTTP, password=, proxyServerAddress=, proxyServerPort=0}"/>
+            <property name="platform" value="Windows 10"/>
+        </properties>
+        <testcase name="Test Cases/TestB" classname="Test Cases/TestB" status="PASSED">
+            <system-out>2019-09-21 17:57:36 - [TEST_CASE][PASSED] - Test Cases/TestB: Test Cases/TestB&#xD;
+&#xD;
+2019-09-21 17:57:37 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''&#xD;
+&#xD;
+2019-09-21 17:57:37 - [MESSAGE][INFO] - Starting 'Chrome (headless)' driver&#xD;
+&#xD;
+2019-09-21 17:57:37 - [MESSAGE][INFO] - User set preference: ['args', '[--window-size=1024,768, --disable-dev-shm-usage, --no-sandbox]']&#xD;
+&#xD;
+2019-09-21 17:57:37 - [MESSAGE][INFO] - Action delay is set to 0 seconds&#xD;
+&#xD;
+2019-09-21 17:57:40 - [MESSAGE][PASSED] - Browser is opened with url: ''&#xD;
+&#xD;
+2019-09-21 17:57:40 - [TEST_STEP][PASSED] - navigateToUrl("http://192.241.158.156/#/"): Navigate to 'http://192.241.158.156/#/' successfully&#xD;
+&#xD;
+2019-09-21 17:57:42 - [MESSAGE][PASSED] - Navigate to 'http://192.241.158.156/#/' successfully&#xD;
+&#xD;
+2019-09-21 17:57:42 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/TestB/Page_front/input_Nombre completo_input-1"), "Matias Calderon"): Text 'Matias Calderon' is set on object 'Object Repository/TestB/Page_front/input_Nombre completo_input-1'&#xD;
+&#xD;
+2019-09-21 17:57:42 - [MESSAGE][PASSED] - Text 'Matias Calderon' is set on object 'Object Repository/TestB/Page_front/input_Nombre completo_input-1'&#xD;
+&#xD;
+2019-09-21 17:57:42 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/TestB/Page_front/input_RUT_input-2"), "19.231.324-k"): Text '19.231.324-k' is set on object 'Object Repository/TestB/Page_front/input_RUT_input-2'&#xD;
+&#xD;
+2019-09-21 17:57:42 - [MESSAGE][PASSED] - Text '19.231.324-k' is set on object 'Object Repository/TestB/Page_front/input_RUT_input-2'&#xD;
+&#xD;
+2019-09-21 17:57:42 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/TestB/Page_front/input_Fecha de nacimiento_input-3"), "10/10/1992"): Text '10/10/1992' is set on object 'Object Repository/TestB/Page_front/input_Fecha de nacimiento_input-3'&#xD;
+&#xD;
+2019-09-21 17:57:42 - [MESSAGE][PASSED] - Text '10/10/1992' is set on object 'Object Repository/TestB/Page_front/input_Fecha de nacimiento_input-3'&#xD;
+&#xD;
+2019-09-21 17:57:42 - [TEST_STEP][PASSED] - selectOptionByValue(findTestObject("Object Repository/TestB/Page_front/select_Ingenieria"), "Ingenieria en Alimentos", true): All options with value 'Ingenieria en Alimentos' are selected in object 'Object Repository/TestB/Page_front/select_Ingenieria'  using regular expression&#xD;
+&#xD;
+2019-09-21 17:57:43 - [MESSAGE][PASSED] - All options with value 'Ingenieria en Alimentos' are selected in object 'Object Repository/TestB/Page_front/select_Ingenieria'  using regular expression&#xD;
+&#xD;
+2019-09-21 17:57:43 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/TestB/Page_front/button_Registrar")): Object: 'Object Repository/TestB/Page_front/button_Registrar' is clicked on&#xD;
+&#xD;
+2019-09-21 17:57:43 - [MESSAGE][PASSED] - Object: 'Object Repository/TestB/Page_front/button_Registrar' is clicked on&#xD;
+&#xD;
+2019-09-21 17:57:43 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed&#xD;
+&#xD;
+2019-09-21 17:57:43 - [MESSAGE][PASSED] - Browser is closed</system-out>
+            <system-err></system-err>
+        </testcase>
+        <testcase name="Test Cases/TestA" classname="Test Cases/TestA" status="PASSED">
+            <system-out>2019-09-21 17:57:43 - [TEST_CASE][PASSED] - Test Cases/TestA: Test Cases/TestA&#xD;
+&#xD;
+2019-09-21 17:57:43 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''&#xD;
+&#xD;
+2019-09-21 17:57:43 - [MESSAGE][INFO] - Starting 'Chrome (headless)' driver&#xD;
+&#xD;
+2019-09-21 17:57:43 - [MESSAGE][INFO] - User set preference: ['args', '[--window-size=1024,768, --disable-dev-shm-usage, --no-sandbox]']&#xD;
+&#xD;
+2019-09-21 17:57:46 - [MESSAGE][PASSED] - Browser is opened with url: ''&#xD;
+&#xD;
+2019-09-21 17:57:46 - [TEST_STEP][PASSED] - navigateToUrl("http://192.241.158.156/#/"): Navigate to 'http://192.241.158.156/#/' successfully&#xD;
+&#xD;
+2019-09-21 17:57:47 - [MESSAGE][PASSED] - Navigate to 'http://192.241.158.156/#/' successfully&#xD;
+&#xD;
+2019-09-21 17:57:47 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/TestA/Page_front/a_Buscar")): Object: 'Object Repository/TestA/Page_front/a_Buscar' is clicked on&#xD;
+&#xD;
+2019-09-21 17:57:47 - [MESSAGE][PASSED] - Object: 'Object Repository/TestA/Page_front/a_Buscar' is clicked on&#xD;
+&#xD;
+2019-09-21 17:57:47 - [TEST_STEP][PASSED] - selectOptionByValue(findTestObject("Object Repository/TestA/Page_front/select_Ingenieria"), "Ingenieria Comercial", true): All options with value 'Ingenieria Comercial' are selected in object 'Object Repository/TestA/Page_front/select_Ingenieria'  using regular expression&#xD;
+&#xD;
+2019-09-21 17:57:48 - [MESSAGE][PASSED] - All options with value 'Ingenieria Comercial' are selected in object 'Object Repository/TestA/Page_front/select_Ingenieria'  using regular expression&#xD;
+&#xD;
+2019-09-21 17:57:48 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/TestA/Page_front/button_Buscar")): Object: 'Object Repository/TestA/Page_front/button_Buscar' is clicked on&#xD;
+&#xD;
+2019-09-21 17:57:48 - [MESSAGE][PASSED] - Object: 'Object Repository/TestA/Page_front/button_Buscar' is clicked on&#xD;
+&#xD;
+2019-09-21 17:57:48 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed&#xD;
+&#xD;
+2019-09-21 17:57:49 - [MESSAGE][PASSED] - Browser is closed</system-out>
+            <system-err></system-err>
+        </testcase>
+        <system-out>2019-09-21 17:57:36 - [TEST_SUITE][INCOMPLETE] - front_suite: null</system-out>
+        <system-err>2019-09-21 17:57:36 - [TEST_SUITE][INCOMPLETE] - front_suite: null</system-err>
+    </testsuite>
+</testsuites>

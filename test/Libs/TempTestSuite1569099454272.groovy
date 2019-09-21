@@ -28,8 +28,8 @@ DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.c
 
 
 
-RunConfiguration.setExecutionSettingFile("C:\\Users\\elmat\\Documents\\ingesoFront\\test\\Reports\\20190921_174239\\front_suite\\20190921_174239\\execution.properties")
+RunConfiguration.setExecutionSettingFile("C:\\Users\\elmat\\Documents\\ingesoFront\\test\\Reports\\20190921_175734\\front_suite\\20190921_175734\\execution.properties")
 
 TestCaseMain.beforeStart()
 
-TestCaseMain.startTestSuite('Test Suites/front_suite', suiteProperties, new File("C:\\Users\\elmat\\Documents\\ingesoFront\\test\\Reports\\20190921_174239\\front_suite\\20190921_174239\\testCaseBinding"))
+TestCaseMain.startTestSuite('Test Suites/front_suite', suiteProperties, new File("C:\\Users\\elmat\\Documents\\ingesoFront\\test\\Reports\\20190921_175734\\front_suite\\20190921_175734\\testCaseBinding"))

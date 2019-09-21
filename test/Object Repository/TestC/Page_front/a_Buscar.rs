@@ -7,10 +7,18 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='nav-collapse']/ul/li[2]/a</value>
+         <value>//*[@id=&quot;app&quot;]/nav/button</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@href = '#/about' and (text() = 'Buscar' or . = 'Buscar')]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

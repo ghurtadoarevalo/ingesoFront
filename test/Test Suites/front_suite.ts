@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>front_suite A</name>
+   <name>front_suite</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -15,5 +15,17 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/TestA</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>beb8769a-f994-4069-b572-ae726b29dcbf</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TestB</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>60f19b38-8d13-425b-80c1-6bf37d9adcb6</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TestC</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

@@ -1,7 +1,7 @@
 <template>
  
   <b-navbar toggleable="lg" type="dark" variant="info">
-    <b-navbar-brand href="/">miTingeso</b-navbar-brand>
+    <b-navbar-brand href="/">miTingeso 2019</b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 

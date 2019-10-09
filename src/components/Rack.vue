@@ -1,51 +1,39 @@
 <template>
-  <v-container>
-      <div id="app">
-      <v-app id="inspire">
-        <v-sheet height="500">
-          <v-calendar
-            type="month"
-            now="2019-01-08"
-            value="2019-01-08"
-            :events="events"
-          ></v-calendar>
-        </v-sheet>
-      </v-app>
+    <div id='app'>
+        <div id='container'>
+            <ejs-schedule ></ejs-schedule>
+        </div>
     </div>
-  </v-container>
 </template>
-
 <script>
+import { SchedulePlugin, Day, Week, WorkWeek, Month, Agenda } from '@syncfusion/ej2-vue-schedule';
+
+import Vue from 'vue';
+
+Vue.use(SchedulePlugin);
+
   export default {
-    data: () => ({
-      events: [
-        {
-          name: 'Vacation',
-          start: '2018-12-30',
-          end: '2019-01-02',
-        },
-        {
-          name: 'Meeting',
-          start: '2019-01-07',
-        },
-        {
-          name: '30th Birthday',
-          start: '2019-01-03',
-        },
-        {
-          name: 'New Year',
-          start: '2019-01-01',
-        },
-        {
-          name: 'Conference',
-          start: '2019-01-21',
-        },
-        {
-          name: 'Hackathon',
-          start: '2019-01-30',
-          end: '2019-02-01',
-        },
-      ],
-    }),
+      data () {
+          return {
+              selectedDate: new Date(2018, 1, 15),
+              //eventSettings: { dataSource: scheduleData },
+              timeScale: {enable: true, slotCount: 5},
+              showWeekend: false
+          }
+      },
+      provide: {
+          schedule: [Day, Week]
+      }
   }
 </script>
+
+<style>
+@import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../../node_modules/@syncfusion/ej2-calendars/styles/material.css';
+@import '../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+@import '../../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css';
+</style>

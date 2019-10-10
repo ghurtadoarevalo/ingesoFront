@@ -29,7 +29,25 @@ export default {
                             'date': '04/09/2019',
                             'iconClass': "Reservado",
                             'name': '<span style="color:red; margin-left:10px"> R </span>',
-                            'tooltip': 'Follow up'
+                            'tooltip': 'Juanito Perez'
+                        },
+                        {
+                            'date': '04/01/2019',
+                            'iconClass': "Reservado",
+                            'name': '<span style="color:red; margin-left:10px"> R </span>',
+                            'tooltip': 'Matias Coronado'
+                        },
+                        {
+                            'date': '04/02/2019',
+                            'iconClass': "Reservado",
+                            'name': '<span style="color:red; margin-left:10px"> R </span>',
+                            'tooltip': 'Matias Coronado'
+                        },
+                        {
+                            'date': '04/25/2025',
+                            'iconClass': "Reservado",
+                            'name': '<span style="color:red; margin-left:10px"> R </span>',
+                            'tooltip': 'Matias Coronado'
                         }
                     ],
                 },
@@ -57,8 +75,8 @@ export default {
                 }
             ],
         },
-                {
-            TaskID: 1,
+        {
+            TaskID: 2,
             TaskName: 'Floor',
             StartDate: new Date('04/02/2019'),
             subtasks: 
@@ -66,13 +84,13 @@ export default {
                 {   TaskID: 1, TaskName: 'Room', Duration: 0, Progress: 0,
                     Indicators: [
                         {
-                            'date': '04/08/2019',
+                            'date': '03/08/2019',
                             'iconClass': "Reservado",
                             'name': '<span style="color:red; margin-left:10px"> R </span>',
                             'tooltip': 'Juanito Perez'
                         },
                         {
-                            'date': '04/09/2019',
+                            'date': '03/09/2019',
                             'iconClass': "Reservado",
                             'name': '<span style="color:red; margin-left:10px"> R </span>',
                             'tooltip': 'Follow up'
@@ -104,8 +122,8 @@ export default {
             ],
         },
     ],
-        height:'450px',
-        weight:'700px',
+        height:'auto',
+        weight:'auto',
         taskFields: {
             id: 'TaskID',
             name: 'TaskName',
@@ -137,4 +155,11 @@ export default {
 @import '../../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css';
 @import '../../node_modules/@syncfusion/ej2-treegrid/styles/material.css';
 @import "../../node_modules/@syncfusion/ej2-vue-gantt/styles/material.css";
+
+.e-gantt .e-gantt-chart .e-taskbar-main-container 
+{
+    visibility: hidden
+}
+
+
 </style>

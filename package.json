@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@syncfusion/ej2-vue-gantt": "^17.3.14",
     "@syncfusion/ej2-vue-grids": "^17.3.16",
     "@syncfusion/ej2-vue-schedule": "^17.3.16",
     "axios": "^0.19.0",

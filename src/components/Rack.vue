@@ -45,6 +45,7 @@ export default {
     {
         scrollDate: function() {
             this.$refs.gantt.scrollToDate(this.picker);
+            this.dialog = false;
     }
     },
   data: function() {
@@ -66,112 +67,107 @@ export default {
         reservations: [
         {
             TaskID: 1,
-            TaskName: 'Floor',
+            TaskName: 'Room',
             StartDate: new Date('04/02/2019'),
-            subtasks: 
-            [
-                {   TaskID: 1, TaskName: 'Room', Duration: 0, Progress: 0,
-                    Indicators: [
-                        {
-                            'date': '04/08/2019',
-                            'iconClass': "Reservado",
-                            'name': '<span style="color:red; margin-left:10px"> R </span>',
-                            'tooltip': 'Juanito Perez'
-                        },
-                        {
-                            'date': '04/09/2019',
-                            'iconClass': "Reservado",
-                            'name': '<span style="color:red; margin-left:10px"> R </span>',
-                            'tooltip': 'Juanito Perez'
-                        },
-                        {
-                            'date': '04/01/2019',
-                            'iconClass': "Reservado",
-                            'name': '<span style="color:red; margin-left:10px"> R </span>',
-                            'tooltip': 'Matias Coronado'
-                        },
-                        {
-                            'date': '04/02/2019',
-                            'iconClass': "Reservado",
-                            'name': '<span style="color:red; margin-left:10px"> R </span>',
-                            'tooltip': 'Matias Coronado'
-                        },
-                        {
-                            'date': '04/25/2025',
-                            'iconClass': "Reservado",
-                            'name': '<span style="color:red; margin-left:10px"> R </span>',
-                            'tooltip': 'Matias Coronado'
-                        }
-                    ],
+            Indicators: [
+                {
+                    'date': '04/08/2019',
+                    'iconClass': "Reservado",
+                    'name': '<div style="color:red; background-color:red; width: 30px; height:35px;margin-left:0px"> R </div>',
+                    'tooltip': 'Juanito Perez'
                 },
-                {   TaskID: 2, TaskName: 'Room', Duration: 0, Progress: 0,
-                    Indicators: [
-                        {
-                            'date': '04/08/2019',
-                            'iconClass': "Reservado",
-                            'name': '<span style="color:red; margin-left:10px"> R </span>',
-                            'tooltip': 'Pedro Picapiedra'
-                        },
-                        {
-                            'date': '04/10/2019',
-                            'iconClass': "Reservado",
-                            'name': '<span style="color:red; margin-left:10px"> R </span>',
-                            'tooltip': 'Pedro Picapiedra'
-                        },
-                        {
-                            'date': '04/9/2019',
-                            'iconClass': "Reservado",
-                            'name': '<span style="color:red; margin-left:10px"> R </span>',
-                            'tooltip': 'Pedro Picapiedra'
-                        }
-                    ],
+                {
+                    'date': '04/09/2019',
+                    'iconClass': "Reservado",
+                    'name': '<span style="color:red; margin-left:10px"> R </span>',
+                    'tooltip': 'Juanito Perez'
+                },
+                {
+                    'date': '04/01/2019',
+                    'iconClass': "Reservado",
+                    'name': '<span style="color:red; margin-left:10px"> R </span>',
+                    'tooltip': 'Matias Coronado'
+                },
+                {
+                    'date': '04/02/2019',
+                    'iconClass': "Reservado",
+                    'name': '<span style="color:red; margin-left:10px"> R </span>',
+                    'tooltip': 'Matias Coronado'
+                },
+                {
+                    'date': '04/25/2025',
+                    'iconClass': "Reservado",
+                    'name': '<span style="color:red; margin-left:10px"> R </span>',
+                    'tooltip': 'Matias Coronado'
                 }
             ],
         },
         {
-            TaskID: 2,
-            TaskName: 'Floor',
+            TaskID: 2, 
+            TaskName: 'Room',             
             StartDate: new Date('04/02/2019'),
-            subtasks: 
-            [
-                
-                {   TaskID: 1, TaskName: 'Room', Duration: 0, Progress: 0,
-                    Indicators: [
-                        {
-                            'date': '03/08/2019',
-                            'iconClass': "Reservado",
-                            'name': '<span style="color:red; margin-left:10px"> R </span>',
-                            'tooltip': 'Juanito Perez'
-                        },
-                        {
-                            'date': '03/09/2019',
-                            'iconClass': "Reservado",
-                            'name': '<span style="color:red; margin-left:10px"> R </span>',
-                            'tooltip': 'Follow up'
-                        }
-                    ],
+            Indicators: [
+                {
+                    'date': '03/08/2019',
+                    'iconClass': "Reservado",
+                    'name': '<span style="color:red; margin-left:10px"> R </span>',
+                    'tooltip': 'Juanito Perez'
                 },
-                {   TaskID: 2, TaskName: 'Room', Duration: 0, Progress: 0,
-                    Indicators: [
-                        {
-                            'date': '04/01/2019',
-                            'iconClass': "Reservado",
-                            'name': '<span style="color:red; margin-left:10px"> R </span>',
-                            'tooltip': 'Pedro Picapiedra'
-                        },
-                        {
-                            'date': '04/02/2019',
-                            'iconClass': "Reservado",
-                            'name': '<span style="color:red; margin-left:10px"> R </span>',
-                            'tooltip': 'Pedro Picapiedra'
-                        },
-                        {
-                            'date': '04/03/2019',
-                            'iconClass': "Reservado",
-                            'name': '<span style="color:red; margin-left:10px"> R </span>',
-                            'tooltip': 'Pedro Picapiedra'
-                        }
-                    ],
+                {
+                    'date': '03/09/2019',
+                    'iconClass': "Reservado",
+                    'name': '<span style="color:red; margin-left:10px"> R </span>',
+                    'tooltip': 'Follow up'
+                }
+            ],
+        },
+        {
+            TaskID: 3, 
+            TaskName: 'Room',             
+            StartDate: new Date('04/02/2019'),
+            Indicators: [
+                {
+                    'date': '03/28/2019',
+                    'iconClass': "Reservado",
+                    'name': '<span style="color:red; margin-left:10px"> R </span>',
+                    'tooltip': 'Juanito Perez'
+                },
+                {
+                    'date': '03/29/2019',
+                    'iconClass': "Reservado",
+                    'name': '<span style="color:red; margin-left:10px"> R </span>',
+                    'tooltip': 'Follow up'
+                }
+            ],
+        },
+                {
+            TaskID: 4, 
+            TaskName: 'Room',             
+            StartDate: new Date('04/02/2019'),
+            Indicators: [
+                {
+                    date: '03/22/2019',
+                    iconClass: "Reservado",
+                    name: '<span style="color:red; margin-left:10px"> R </span>',
+                    tooltip: 'Juanito Perez'
+                },
+                {
+                    date: '03/23/2019',
+                    iconClass: "Reservado",
+                    name: '<span style="color:red; margin-left:10px"> R </span>',
+                    tooltip: 'Follow up'
+                },
+                                {
+                    'date': '03/24/2019',
+                    'iconClass': "Reservado",
+                    'name': '<span style="color:red; margin-left:10px"> R </span>',
+                    'tooltip': 'Follow up'
+                },
+                {
+                    'date': '03/25/2019',
+                    'iconClass': "Reservado",
+                    'name': '<span style="color:red; margin-left:10px"> R </span>',
+                    'tooltip': 'Follow up'
                 }
             ],
         },

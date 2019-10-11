@@ -44,7 +44,7 @@ export default {
   methods:
     {
         scrollDate: function() {
-            this.$refs.gantt.scrollToDate(new Date('04/02/2019'));
+            this.$refs.gantt.scrollToDate(this.picker);
     }
     },
   data: function() {

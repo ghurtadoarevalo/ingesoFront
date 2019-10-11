@@ -1,5 +1,5 @@
 <template>
-    <v-form @submit="onSubmit" v-model="valid">
+    <v-form @submit="onSubmit">
         <v-container>
             <v-col>
                 <v-col cols="12" md="4">
@@ -19,20 +19,23 @@
                 </v-col>
 
                 <v-col cols="12" md="4">
-                    <v-text-field v-model="reservation.initialDate" label="Arrive date" type="date" required></v-text-field>
-                </v-col>
-
-                <v-col cols="12" md="4">
-                    <v-text-field v-model="reservation.finalDate" label="Leave date" type="date" required></v-text-field>
-                </v-col>
-
-                <v-col cols="12" md="4">
                     <v-text-field label="Numero de habitaciones" type="number" min="1" v-model="roomNumber" required></v-text-field>
                 </v-col>
 
                 <v-col cols="12" md="4">
-                    <v-select :items="rooms"></v-select>
+                    <v-select :items="Habitaciones"></v-select>
                 </v-col>
+
+                <v-col>
+                    <p>Choose room type</p>
+                    <v-radio-group v-model="roomType" :mandatory="false">
+                        <v-radio label="Estandar" value=0></v-radio>
+                        <v-radio label="Suite" value=1></v-radio>
+                        <v-radio label="Vip" value=2></v-radio>
+                    </v-radio-group>
+                </v-col>
+
+                <hr>
 
                 <v-col>
                     <v-btn type="submit">Create reservation</v-btn>
@@ -44,6 +47,8 @@
 
 <script>
     import axios from 'axios'
+    import {mapState, mapMutations} from "vuex";
+    import store from '@/store';
     export default {
         data() {
             return {
@@ -58,13 +63,12 @@
                     finalDate: '',
                     roomList: [{}]
                 },
-                rooms: [{
+                roomList: [{
                     name: 'suite'
                 }],
-                items: ['Foo', 'Bar', 'Fizz', 'Buzz'],
-                habitacion: ['101', '102', '103'],
+                roomType: '',
+                rooms: [],
                 roomNumber: '1',
-                ejemplo: 'hola'
             }
         },
         methods: {
@@ -90,6 +94,19 @@
                         currentObject.output = error;
                 });
             }
+        },
+        created () {
+            axios.get('http://localhost:8080/room/rooms')
+                .then((res) => {
+                    console.log(res.data);
+                    var aux = []
+                    for(let i=0; i<res.data.length; i++){
+                        aux.push(res.data[i].roomNumber)
+                    }
+                    console.log(aux);
+                    this.rooms = aux;
+                })
+            console.log(this.rooms)
         }
     }
 </script>

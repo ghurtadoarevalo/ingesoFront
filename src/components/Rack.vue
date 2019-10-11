@@ -1,6 +1,39 @@
 <template>
      <div>
-        <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height"></ejs-gantt>
+         <div class="mb-5 mt-2">
+            <v-dialog
+            v-model="dialog"
+            width="400"
+            >
+                <template v-slot:activator="{ on }">
+                    <v-btn
+                    color="red lighten-2"
+                    dark
+                    v-on="on"
+                    >
+                    Search Date
+                    </v-btn>
+                </template>
+
+                <v-date-picker
+                    v-model="picker"
+                    :landscape="landscape"
+                    :reactive="reactive"
+                    :full-width="fullWidth"
+                    :show-current="showCurrent"
+                    :type="month ? 'month' : 'date'"
+                    :multiple="multiple"
+                    :readonly="readonly"
+                    :disabled="disabled"
+                    :events="enableEvents ? functionEvents : null"
+                ></v-date-picker>
+
+                <v-btn dark color="primary" @click="scrollDate"> Search </v-btn>
+            </v-dialog>
+         </div>
+        <div>
+            <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="reservations" :taskFields = "taskFields" :selectionSettings= "selectionSettings" :height = "height"></ejs-gantt>
+        </div>
     </div>
 </template>
 <script>
@@ -8,9 +41,29 @@ import Vue from "vue";
 import { GanttPlugin } from "@syncfusion/ej2-vue-gantt";
 Vue.use(GanttPlugin);
 export default {
+  methods:
+    {
+        scrollDate: function() {
+            this.$refs.gantt.scrollToDate(new Date('04/02/2019'));
+    }
+    },
   data: function() {
       return{
-        data: [
+        picker: new Date().toISOString().substr(0, 10),
+        landscape: false,
+        reactive: false,
+        fullWidth: false,
+        showCurrent: true,
+        month: false,
+        multiple: false,
+        readonly: false,
+        disabled: false,
+        enableEvents: false,
+        dialog: false,
+        selectionSettings: {
+            mode: 'Both',
+        },
+        reservations: [
         {
             TaskID: 1,
             TaskName: 'Floor',
@@ -81,6 +134,7 @@ export default {
             StartDate: new Date('04/02/2019'),
             subtasks: 
             [
+                
                 {   TaskID: 1, TaskName: 'Room', Duration: 0, Progress: 0,
                     Indicators: [
                         {

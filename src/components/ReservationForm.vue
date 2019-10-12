@@ -73,10 +73,8 @@
         methods: {
             onSubmit() {
                 let currentObject = this;
-                console.log(this.roomNumber);
                 let index = this.rooms.indexOf(this.roomNumber);
                 let finalRoom = this.roomIds[index];
-                console.log(finalRoom);
                 let newReservation = {
                     client: {
                         name: this.reservation.client.name,
@@ -91,7 +89,7 @@
                     }]
                 }
                 console.log(newReservation)
-                axios.post('http://localhost:8080/reservation/create', newReservation)
+                axios.post('http://192.241.158.156:8081/reservation/create', newReservation)
                     .then(function (response) {
                         currentObject.output = response.data;
                     })
@@ -101,7 +99,7 @@
             }
         },
         created () {
-            axios.get('http://localhost:8080/room/rooms')
+            axios.get('http://192.241.158.156:8081/room/rooms')
                 .then((res) => {
                     console.log(res.data);
                     var aux = []

@@ -1,7 +1,8 @@
 <template>
     <v-form @submit="onSubmit">
         <v-container>
-            <v-col>
+            <v-col align="center">
+                <v-title>Create Reservation Form</v-title>
                 <v-col cols="12" md="4">
                     <v-text-field v-model="reservation.client.name" label="First name" required></v-text-field>
                 </v-col>
@@ -19,23 +20,19 @@
                 </v-col>
 
                 <v-col cols="12" md="4">
-                    <v-text-field label="Numero de habitaciones" type="number" min="1" v-model="roomNumber" required></v-text-field>
+                    <v-text-field v-model="reservation.initialDate" label="Arrive date" type="date" required></v-text-field>
                 </v-col>
 
                 <v-col cols="12" md="4">
-                    <v-select :items="Habitaciones"></v-select>
+                    <v-text-field v-model="reservation.finalDate" label="Leave date" type="date" required></v-text-field>
                 </v-col>
 
-                <v-col>
-                    <p>Choose room type</p>
-                    <v-radio-group v-model="roomType" :mandatory="false">
-                        <v-radio label="Estandar" value=0></v-radio>
-                        <v-radio label="Suite" value=1></v-radio>
-                        <v-radio label="Vip" value=2></v-radio>
-                    </v-radio-group>
+                <v-col cols="12" md="4" data-app>
+                    <v-select :items="rooms"
+                              v-model="roomNumber"
+                              item-value="roomIds"
+                              ></v-select>
                 </v-col>
-
-                <hr>
 
                 <v-col>
                     <v-btn type="submit">Create reservation</v-btn>
@@ -61,19 +58,25 @@
                     },
                     initialDate: '',
                     finalDate: '',
-                    roomList: [{}]
+                    roomList: [{
+                        roomId: ''
+                    }]
                 },
-                roomList: [{
-                    name: 'suite'
-                }],
                 roomType: '',
                 rooms: [],
-                roomNumber: '1',
+                roomIds: [],
+                roomId: '',
+                roomNumber: '',
+                roomNumbers: ''
             }
         },
         methods: {
             onSubmit() {
                 let currentObject = this;
+                console.log(this.roomNumber);
+                let index = this.rooms.indexOf(this.roomNumber);
+                let finalRoom = this.roomIds[index];
+                console.log(finalRoom);
                 let newReservation = {
                     client: {
                         name: this.reservation.client.name,
@@ -83,7 +86,9 @@
                     },
                     initialDate: this.reservation.initialDate,
                     finalDate: this.reservation.finalDate,
-                    roomList: [{}]
+                    roomList: [{
+                        roomId: finalRoom
+                    }]
                 }
                 console.log(newReservation)
                 axios.post('http://localhost:8080/reservation/create', newReservation)
@@ -100,11 +105,15 @@
                 .then((res) => {
                     console.log(res.data);
                     var aux = []
+                    var ids = []
                     for(let i=0; i<res.data.length; i++){
                         aux.push(res.data[i].roomNumber)
+                        ids.push(res.data[i].roomId)
                     }
+
                     console.log(aux);
                     this.rooms = aux;
+                    this.roomIds = ids;
                 })
             console.log(this.rooms)
         }

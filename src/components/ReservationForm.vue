@@ -103,7 +103,7 @@
                     finalDate: this.reservation.finalDate,
                     roomList: [{}]
                 }
-                axios.post('http://localhost:8080/room/getByDate', newReservation)
+                axios.post('http://192.241.158.156:8081/room/getByDate', newReservation)
                     .then((res) => {
                         let roomListAux = res.data.roomList;
                         let aux = [];
@@ -146,6 +146,10 @@
                     alert('Please, enter a room number');
                     return;
                 }
+                if(this.reservation.initialDate > this.reservation.finalDate) {
+                    alert('Please, enter valid dates');
+                    return;
+                }
                 if(this.validator) {
                     alert('Please, check that all fills are correctly');
                     return;
@@ -166,7 +170,7 @@
                         roomId: finalRoom
                     }]
                 };
-                axios.post('http://localhost:8080/reservation/create', newReservation)
+                axios.post('http://192.241.158.156:8081/reservation/create', newReservation)
                     .then(function (response) {
                         console.log('Tudu bem')
                         currentObject.output = response.data;

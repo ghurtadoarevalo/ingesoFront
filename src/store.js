@@ -5,49 +5,28 @@ Vue.use(Vuex, Axios)
 
 export default new Vuex.Store({
 	state: {
-		rooms: [],
 		reservations: [],
+		createdReserve: false,
 		finalReservations: [],
-		createdReserve: false
-
+		dataState: false
 	},
 	mutations: {
 		async getRooms(state){	
 			try{
-
 				await Axios 
-				.get('http://localhost:8080/room/rooms')
-				.then(response => (state.rooms = response.data));
-		
-				console.log('Habitaciones cargadas');
-				console.log(state.rooms);
-
-			}catch(err){console.log("En get all all " + err)}
-
-			try{
-				await Axios 
-				.get('http://localhost:8080/reservation/reservationsDates')
+				.get('http://192.241.158.156:8081/reservation/getAllWithDate')
 				.then(response => (state.reservations = response.data));
 		
-				console.log('Reservas cargadas');
+				console.log('Habitaciones cargadas');
 				console.log(state.reservations);
 
 			}catch(err){console.log("En get all all " + err)}
 
-			let reservations = []
-			
-			state.rooms.forEach(element => {
-				let reservation = 
-				{
-					TaskID : element.roomNumber,
-					TaskName : "Room",
-					StartDate : new Date(),
-					Indicators: [],
-				}
-
-				reservations.push(reservation)
-			});
-
+			state.reservations.reservations.forEach(element => {
+				element.StartDate = new Date();
+                state.finalReservations.push(element)
+			})
+			state.dataState = true
 		},
 		changeReservationAlert(state) {
 			state.createdReserve = !state.createdReserve;

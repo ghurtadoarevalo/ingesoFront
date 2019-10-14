@@ -33,9 +33,10 @@
          </div>
         <div>
 
-            <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="reservations" :taskFields = "taskFields" :selectionSettings= "selectionSettings" :height = "height"></ejs-gantt>
+            <ejs-gantt v-if="dataState" ref='gantt' id="GanttContainer" :dataSource="finalReservations" :taskFields = "taskFields" :selectionSettings= "selectionSettings" :height = "height"></ejs-gantt>
         </div>
-        </div>
+
+     </div>
 
 
 </template>
@@ -56,11 +57,40 @@ export default {
     beforeCreate(){
 		this.$store.dispatch('getRooms')
 	},
-    computed:{
-      ...mapState(['finalReservations']), 
+    sumar(){
+      this.porcentaje = this.porcentaje + 100
     },
+    computed: {
+        ...mapState(['finalReservations', 'dataState']),
+        test()
+        {
+            return this.showData = true
+        }
+
+    },
+
     data: function() {
         return{
+            showData: false,
+            reservations:
+                [{
+                    TaskName: 'Room',
+                    TaskID: 1,
+                    StartDate: new Date('04/02/2019'),
+                    Indicators: [
+                        {
+                            'date': '04/08/2019',
+                            'iconClass': "Reservado",
+                            'name': '<span style="color:red; margin-left:10px"> R </span>',
+                            'tooltip': 'Juanito Perez'
+                        },
+                        {
+                            'date': '04/09/2019',
+                            'iconClass': "Reservado",
+                            'name': '<span style="color:red; margin-left:10px"> R </span>',
+                            'tooltip': 'Juanito Perez'
+                        }]
+                }],
             picker: new Date().toISOString().substr(0, 10),
             landscape: false,
             reactive: false,
@@ -75,115 +105,6 @@ export default {
             selectionSettings: {
                 mode: 'Both',
             },
-            reservations: 
-            [
-                {
-                    TaskID: 1,
-                    TaskName: 'Room',
-                    StartDate: new Date('04/02/2019'),
-                    Indicators: [
-                        {
-                            'date': '04/08/2019',
-                            'iconClass': "Reservado",
-                            'name': '<span style="color:red; margin-left:10px"> R </span>',
-                            'tooltip': 'Juanito Perez'
-                        },
-                        {
-                            'date': '04/09/2019',
-                            'iconClass': "Reservado",
-                            'name': '<span style="color:red; margin-left:10px"> R </span>',
-                            'tooltip': 'Juanito Perez'
-                        },
-                        {
-                            'date': '04/01/2019',
-                            'iconClass': "Reservado",
-                            'name': '<span style="color:red; margin-left:10px"> R </span>',
-                            'tooltip': 'Matias Coronado'
-                        },
-                        {
-                            'date': '04/02/2019',
-                            'iconClass': "Reservado",
-                            'name': '<span style="color:red; margin-left:10px"> R </span>',
-                            'tooltip': 'Matias Coronado'
-                        },
-                        {
-                            'date': '04/25/2025',
-                            'iconClass': "Reservado",
-                            'name': '<span style="color:red; margin-left:10px"> R </span>',
-                            'tooltip': 'Matias Coronado'
-                        }
-                    ],
-                },
-                {
-                    TaskID: 2, 
-                    TaskName: 'Room',             
-                    StartDate: new Date('04/02/2019'),
-                    Indicators: [
-                        {
-                            'date': '03/08/2019',
-                            'iconClass': "Reservado",
-                            'name': '<span style="color:red; margin-left:10px"> R </span>',
-                            'tooltip': 'Juanito Perez'
-                        },
-                        {
-                            'date': '03/09/2019',
-                            'iconClass': "Reservado",
-                            'name': '<span style="color:red; margin-left:10px"> R </span>',
-                            'tooltip': 'Follow up'
-                        }
-                    ],
-                },
-                {
-                    TaskID: 3, 
-                    TaskName: 'Room',             
-                    StartDate: new Date('04/02/2019'),
-                    Indicators: [
-                        {
-                            'date': '03/28/2019',
-                            'iconClass': "Reservado",
-                            'name': '<span style="color:red; margin-left:10px"> R </span>',
-                            'tooltip': 'Juanito Perez'
-                        },
-                        {
-                            'date': '03/29/2019',
-                            'iconClass': "Reservado",
-                            'name': '<span style="color:red; margin-left:10px"> R </span>',
-                            'tooltip': 'Follow up'
-                        }
-                    ],
-                },
-                {
-                    TaskID: 4, 
-                    TaskName: 'Room',             
-                    StartDate: new Date('04/02/2019'),
-                    Indicators: [
-                        {
-                            date: '03/22/2019',
-                            iconClass: "Reservado",
-                            name: '<span style="color:red; margin-left:10px"> R </span>',
-                            tooltip: 'Juanito Perez'
-                        },
-                        {
-                            date: '03/23/2019',
-                            iconClass: "Reservado",
-                            name: '<span style="color:red; margin-left:10px"> R </span>',
-                            tooltip: 'Follow up'
-                        },
-                                        {
-                            'date': '03/24/2019',
-                            'iconClass': "Reservado",
-                            'name': '<span style="color:red; margin-left:10px"> R </span>',
-                            'tooltip': 'Follow up'
-                        },
-                        {
-                            'date': '03/25/2019',
-                            'iconClass': "Reservado",
-                            'name': '<span style="color:red; margin-left:10px"> R </span>',
-                            'tooltip': 'Follow up'
-                        }
-                    ],
-                },
-            ],
             height:'auto',
             weight:'auto',
             taskFields: {

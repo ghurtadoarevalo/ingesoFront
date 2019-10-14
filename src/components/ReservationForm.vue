@@ -1,73 +1,113 @@
 <template>
-    <v-form @submit="onSubmit">
-        <input required>
-        <v-container>
-            <v-col align="center">
-                <v-col cols="12" md="4">
-                <h1>Create Reservation</h1>
-                <hr>
-            </v-col>
-                <v-col cols="12" md="4">
-                    <v-text-field v-model="reservation.client.name"
-                                  label="First name"
-                                  @change="checkName(reservation.client.name)"
-                                  placeholder="Bryan"
-                                  required></v-text-field>
-                </v-col>
+    <div class="text-center">
+        <v-dialog
+                v-model="dialog"
+                width="500"
+        >
+            <template v-slot:activator="{ on }">
+                <v-btn
+                        color="red lighten-2"
+                        dark
+                        v-on="on"
+                >
+                    Create Reservation
+                </v-btn>
+            </template>
 
-                <v-col cols="12" md="4">
-                    <v-text-field v-model="reservation.client.mail"
-                                  label="E-mail"
-                                  @change="checkMail(reservation.client.mail)"
-                                  placeholder="example@example.com"
-                                  required></v-text-field>
-                </v-col>
+            <v-card>
+                <v-card-title
+                        class="headline grey lighten-2"
+                        primary-title
+                >
+                    Create Reservation
+                </v-card-title>
 
-                <v-col cols="12" md = "4">
-                    <v-text-field
-                            v-model="reservation.client.contact"
-                            label="Contact"
-                            @change="checkNumber(reservation.client.contact)"
-                            placeholder="+56968307895"
-                            required></v-text-field>
-                </v-col>
+                    <v-form>
+                        <input required>
+                        <v-container>
+                            <v-col align="center">
+                                <v-col cols="12" md="10">
+                                    <v-text-field v-model="reservation.client.name"
+                                                  label="First name"
+                                                  @change="checkName(reservation.client.name)"
+                                                  placeholder="Bryan"
+                                                  required></v-text-field>
+                                </v-col>
 
-                <v-col cols="12" md = "4">
-                    <v-text-field v-model="reservation.client.passport"
-                                  @change="checkPassport(reservation.client.passport)"
-                                  label="Passport"
-                                  placeholder="M0993353"
-                                  required></v-text-field>
-                </v-col>
+                                <v-col cols="12" md="10">
+                                    <v-text-field v-model="reservation.client.mail"
+                                                  label="E-mail"
+                                                  @change="checkMail(reservation.client.mail)"
+                                                  placeholder="example@example.com"
+                                                  required></v-text-field>
+                                </v-col>
 
-                <v-col cols="12" md="4">
-                    <v-text-field v-model="reservation.initialDate" label="Arrive date" type="date" required></v-text-field>
-                </v-col>
+                                <v-col cols="12" md = "10">
+                                    <v-text-field
+                                            v-model="reservation.client.contact"
+                                            label="Contact"
+                                            @change="checkNumber(reservation.client.contact)"
+                                            placeholder="+56968307895"
+                                            required></v-text-field>
+                                </v-col>
 
-                <v-col cols="12" md="4">
-                    <v-text-field v-model="reservation.finalDate" @change="getRoomsByDate" label="Leave date" type="date" required></v-text-field>
-                </v-col>
+                                <v-col cols="12" md = "10">
+                                    <v-text-field v-model="reservation.client.passport"
+                                                  @change="checkPassport(reservation.client.passport)"
+                                                  label="Passport"
+                                                  placeholder="M0993353"
+                                                  required></v-text-field>
+                                </v-col>
 
-                <v-col cols="12" md="4" data-app>
-                    <v-select :items="rooms"
-                              v-model="roomNumber"
-                              item-value="roomIds"
-                              ></v-select>
-                </v-col>
+                                <v-col cols="12" md="10">
+                                    <v-text-field v-model="reservation.initialDate" label="Arrive date" type="date" required></v-text-field>
+                                </v-col>
 
-                <v-col>
-                    <v-btn type="submit">Create reservation</v-btn>
-                </v-col>
-            </v-col>
-        </v-container>
-    </v-form>
+                                <v-col cols="12" md="10">
+                                    <v-text-field v-model="reservation.finalDate" @change="getRoomsByDate" label="Leave date" type="date" required></v-text-field>
+                                </v-col>
+
+                                <v-col cols="12" md="10" data-app>
+                                    <v-select :items="rooms"
+                                              v-model="roomNumber"
+                                              item-value="roomIds"
+                                              label="Choose Room"
+                                    ></v-select>
+                                </v-col>
+
+                            </v-col>
+                        </v-container>
+                    </v-form>
+
+                <v-divider></v-divider>
+
+                <v-card-actions>
+                    <v-spacer></v-spacer>
+                    <v-btn
+                            color="primary"
+                            text
+                            @click="dialog = false; onSubmit(); changeReservationAlert()"
+                    >
+                        Create Reservation
+                    </v-btn>
+                </v-card-actions>
+            </v-card>
+        </v-dialog>
+    </div>
+
+
+
+
 </template>
 
 <script>
     import axios from 'axios'
+    import { mapMutations } from 'vuex'
+
     export default {
         data() {
             return {
+                dialog: false,
                 reservation: {
                     client: {
                         name: '',
@@ -91,6 +131,7 @@
             }
         },
         methods: {
+            ...mapMutations(['changeReservationAlert']),
             getRoomsByDate() {
                 let newReservation = {
                     client: {
@@ -116,7 +157,6 @@
                         this.roomIds = ids;
                     })
             },
-
             onSubmit() {
                 if(this.reservation.client.name === '') {
                     alert('Please, enter your name')
@@ -180,7 +220,6 @@
                         currentObject.output = error;
                 });
             },
-
             checkPassport(advalue) {
                 var patt = new RegExp("^([A-Z a-z]){1}([0-9]){7}$");
                 if (patt.test(advalue)) {
@@ -191,7 +230,6 @@
                     alert("Passport is not valid");
                 }
             },
-
             checkMail(mail) {
                 var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
                 if(re.test(mail)) {
@@ -202,7 +240,6 @@
                     alert('Mail is not valid');
                 }
             },
-
             checkName(name) {
                 var regName = /^[a-zA-Z]/;
                 if(regName.test(name)){

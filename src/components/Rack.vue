@@ -35,7 +35,7 @@
 
             <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="reservations" :taskFields = "taskFields" :selectionSettings= "selectionSettings" :height = "height"></ejs-gantt>
         </div>
-    t    </div>
+        </div>
 
 
 </template>

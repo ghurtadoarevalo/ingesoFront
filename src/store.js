@@ -7,7 +7,8 @@ export default new Vuex.Store({
 	state: {
 		rooms: [],
 		reservations: [],
-		finalReservations: []
+		finalReservations: [],
+		createdReserve: false
 
 	},
 	mutations: {
@@ -48,21 +49,8 @@ export default new Vuex.Store({
 			});
 
 		},
-		getReservationsRooms(state)
-		{
-
-
-			//state.reservations.forEach(initialReservations => {
-
-			//	reservations.forEach(backReservations => {
-			//		if(reservation.roomList.includes(reservation.TaskID) ) 
-			//		{
-
-			//		}
-		//		});
-				
-		//		}
-			//)
+		changeReservationAlert(state) {
+			state.createdReserve = !state.createdReserve;
 		}
 	},
 	actions: {
@@ -70,5 +58,9 @@ export default new Vuex.Store({
 		{
 			context.commit('getRooms')
 		},
+        changeReservationAlert(context)
+		{
+			context.commit('changeReservationAlert')
+		}
 	}
 })

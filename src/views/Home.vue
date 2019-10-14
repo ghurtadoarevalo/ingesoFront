@@ -35,10 +35,10 @@
 
     <v-content>
       <v-container
-        class="fill-height"
-        fluid
+          fluid
       >
         <Rack/>
+
       </v-container>
     </v-content>
 
@@ -61,9 +61,7 @@ import Rack from '../components/Rack'
     },
     data: () => ({
       drawer: null,
-    }),
-    created () {
-      this.$vuetify.theme.dark = false
-    },
+    })
   }
+
 </script>

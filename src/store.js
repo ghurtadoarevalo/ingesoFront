@@ -19,10 +19,6 @@ export default new Vuex.Store({
 				await Axios 
 				.get('http://192.241.158.156:8081/reservation/getAllWithDate')
 				.then(response => (state.reservations = response.data));
-		
-				console.log('Habitaciones cargadas');
-				console.log(state.reservations);
-
 			}catch(err){console.log("En get all all " + err)}
 
 			try{

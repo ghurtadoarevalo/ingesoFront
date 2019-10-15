@@ -65,7 +65,7 @@
                                 </v-col>
 
                                 <v-col cols="12" md="10">
-                                    <v-text-field v-model="reservation.finalDate" @change="getRoomsByDate" label="Leave date" type="date" required></v-text-field>
+                                    <v-text-field v-model="reservation.finalDate" @change="getRoomsByDate" :disabled="finalDateState" label="Leave date" type="date" required></v-text-field>
                                 </v-col>
 
                                 <v-col cols="12" md="10" data-app>
@@ -138,36 +138,47 @@
                 roomNumber: '',
                 roomNumbers: '',
                 validator: false,
-                initialDateReservation: ''
+                initialDateReservation: '',
+                finalDateState: true,
+                finalDateAlert: false
             }
         },
         methods: {
             ...mapMutations(['changeReservationAlert','changeDataState','goToReservationDate']),
             getRoomsByDate() {
-                let newReservation = {
-                    client: {
-                        name: this.reservation.client.name,
-                        mail: this.reservation.client.mail,
-                        contact: this.reservation.client.contact,
-                        passport: this.reservation.client.passport
-                    },
-                    initialDate: this.reservation.initialDate,
-                    finalDate: this.reservation.finalDate,
-                    roomList: [{}]
+                if(this.finalDateAlert == true)
+                {
+                    this.finalDateAlert = false
                 }
 
-                axios.post('http://192.241.158.156:8081/room/getByDate', newReservation)
-                    .then((res) => {
-                        let roomListAux = res.data.roomList;
-                        let aux = [];
-                        var ids = [];
-                        for(let i = 0; i < roomListAux.length; i++) {
-                            aux.push(roomListAux[i].roomNumber);
-                            ids.push(roomListAux[i].roomId);
-                        }
-                        this.rooms = aux;
-                        this.roomIds = ids;
+                else
+                {
+                    let newReservation = {
+                        client: {
+                            name: this.reservation.client.name,
+                            mail: this.reservation.client.mail,
+                            contact: this.reservation.client.contact,
+                            passport: this.reservation.client.passport
+                        },
+                        initialDate: this.reservation.initialDate,
+                        finalDate: this.reservation.finalDate,
+                        roomLfinalDateAlertist: [{}]
+                    }
+
+                    axios.post('http://192.241.158.156:8081/room/getByDate', newReservation)
+                        .then((res) => {
+                            let roomListAux = res.data.roomList;
+                            let aux = [];
+                            var ids = [];
+                            for(let i = 0; i < roomListAux.length; i++) {
+                                aux.push(roomListAux[i].roomNumber);
+                                ids.push(roomListAux[i].roomId);
+                            }
+                            this.rooms = aux;
+                            this.roomIds = ids;
                     })
+                }
+
             },
             onSubmit() {
                 if(this.reservation.client.name === '') {
@@ -386,6 +397,10 @@
             initialDate()
             {
                 return this.reservation.initialDate
+            },
+            finalDate()
+            {
+                return this.reservation.finalDate
             }
 
         },
@@ -403,7 +418,30 @@
 
             initialDate()
             {
+
+                if(this.reservation.initialDate != "")
+                {
+                    this.finalDateState = false
+                }
+
                 this.reservation.finalDate = this.reservation.initialDate
+
+                
+            },
+            finalDate()
+            {
+                let finalDate = new Date(this.reservation.finalDate)
+                let initialDate = new Date(this.reservation.initialDate)
+                
+                let difference = finalDate - initialDate
+                let differenceInDay = difference/(1000 * 3600 * 24)
+                
+                if(differenceInDay > 45)
+                {
+                    alert("The difference between Arrive date and Leave date can't be higher than 45 days and you have " + differenceInDay + " days of difference")
+                    this.reservation.finalDate = ''
+                    this.finalDateAlert = true
+                }
 
             }
             

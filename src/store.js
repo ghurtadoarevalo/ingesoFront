@@ -8,7 +8,8 @@ export default new Vuex.Store({
 		reservations: [],
 		createdReserve: false,
 		finalReservations: [],
-		dataState: false
+		dataState: false,
+		reservationDate: ''
 	},
 	mutations: {
 		async getRooms(state){	
@@ -21,6 +22,8 @@ export default new Vuex.Store({
 				console.log(state.reservations);
 
 			}catch(err){console.log("En get all all " + err)}
+			
+			state.finalReservations = []
 
 			state.reservations.reservations.forEach(element => {
 				element.StartDate = new Date();
@@ -30,6 +33,14 @@ export default new Vuex.Store({
 		},
 		changeReservationAlert(state) {
 			state.createdReserve = !state.createdReserve;
+		},
+		changeDataState (state)
+		{
+			state.dataState = !state.dataState
+		},
+		goToReservationDate(state, date)
+		{
+			state.reservationDate = date
 		}
 	},
 	actions: {
@@ -40,6 +51,10 @@ export default new Vuex.Store({
         changeReservationAlert(context)
 		{
 			context.commit('changeReservationAlert')
-		}
+		},
+		changeDataState(context)
+		{
+			context.commit('changeDataState')
+		},
 	}
 })

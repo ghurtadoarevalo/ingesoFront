@@ -86,7 +86,7 @@
                     <v-btn
                             color="primary"
                             text
-                            @click="onSubmit"
+                            @click="onSubmit()"
                     >
                         Create Reservation
                     </v-btn>
@@ -102,7 +102,7 @@
 
 <script>
     import axios from 'axios'
-    import { mapMutations } from 'vuex'
+    import { mapMutations, mapState } from 'vuex'
 
     export default {
         data() {
@@ -127,11 +127,12 @@
                 roomId: '',
                 roomNumber: '',
                 roomNumbers: '',
-                validator: false
+                validator: false,
+                initialDateReservation: ''
             }
         },
         methods: {
-            ...mapMutations(['changeReservationAlert']),
+            ...mapMutations(['changeReservationAlert','changeDataState','goToReservationDate']),
             getRoomsByDate() {
                 let newReservation = {
                     client: {
@@ -144,6 +145,7 @@
                     finalDate: this.reservation.finalDate,
                     roomList: [{}]
                 }
+
                 axios.post('http://192.241.158.156:8081/room/getByDate', newReservation)
                     .then((res) => {
                         let roomListAux = res.data.roomList;
@@ -224,6 +226,10 @@
                         currentObject.output = error;
                 });
                 this.dialog = false;
+
+
+                this.initialDateReservation = this.reservation.initialDate
+            
                 this.changeReservationAlert();
             },
             checkPassport(advalue) {
@@ -278,7 +284,33 @@
             }
         },
 
-        created () {
+        computed:
+        {
+            ...mapState(['dataState']),
+            initialDate()
+            {
+                return this.reservation.initialDate
+            }
+
+        },
+        watch:
+        {
+            dialog: function()
+            {
+               	this.$store.dispatch('getRooms')
+            },
+
+            initialDateReservation: function()
+            {
+                this.goToReservationDate(this.initialDateReservation)
+            },
+
+            initialDate()
+            {
+                this.reservation.finalDate = this.reservation.initialDate
+
+            }
+            
         }
     }
 </script>

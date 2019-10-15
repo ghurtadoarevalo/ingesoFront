@@ -28,12 +28,12 @@
                     :events="enableEvents ? functionEvents : null"
                 ></v-date-picker>
 
-                <v-btn dark color="primary" @click="scrollDate"> Search </v-btn>
+                <v-btn dark color="primary" @click="scrollDate(picker)"> Search </v-btn>
             </v-dialog>
          </div>
         <div>
 
-            <ejs-gantt v-if="dataState" ref='gantt' id="GanttContainer" :dataSource="finalReservations" :taskFields = "taskFields" :selectionSettings= "selectionSettings" :height = "height"></ejs-gantt>
+            <ejs-gantt v-if="dataState" ref='gantt' id="GanttContainer" :splitterSettings="splitterSettings" :allowResizing = 'false' :dataSource="finalReservations" :columns ="columns" :taskFields = "taskFields" :selectionSettings= "selectionSettings" :height = "height"></ejs-gantt>
         </div>
 
      </div>
@@ -49,48 +49,20 @@ Vue.use(GanttPlugin);
 export default {
     methods:
     {
-        scrollDate: function() {
-            this.$refs.gantt.scrollToDate(this.picker);
+        scrollDate: function(date) {
+            this.$refs.gantt.scrollToDate(date);
             this.dialog = false;
         },
     },
     beforeCreate(){
 		this.$store.dispatch('getRooms')
 	},
-    sumar(){
-      this.porcentaje = this.porcentaje + 100
-    },
     computed: {
-        ...mapState(['finalReservations', 'dataState']),
-        test()
-        {
-            return this.showData = true
-        }
-
+        ...mapState(['finalReservations', 'dataState','reservationDate']),
     },
 
     data: function() {
         return{
-            showData: false,
-            reservations:
-                [{
-                    TaskName: 'Room',
-                    TaskID: 1,
-                    StartDate: new Date('04/02/2019'),
-                    Indicators: [
-                        {
-                            'date': '04/08/2019',
-                            'iconClass': "Reservado",
-                            'name': '<span style="color:red; margin-left:10px"> R </span>',
-                            'tooltip': 'Juanito Perez'
-                        },
-                        {
-                            'date': '04/09/2019',
-                            'iconClass': "Reservado",
-                            'name': '<span style="color:red; margin-left:10px"> R </span>',
-                            'tooltip': 'Juanito Perez'
-                        }]
-                }],
             picker: new Date().toISOString().substr(0, 10),
             landscape: false,
             reactive: false,
@@ -117,8 +89,21 @@ export default {
                 dependency: 'Predecessor',
                 child: 'subtasks',
                 indicators: 'Indicators'
-            }
+            },
+            columns: [
+                { field: 'TaskID', width: '100', headerText: 'Room Number', textAlign: 'center' },
+            ],
+            splitterSettings:{
+                columnIndex: 1
+          },
         };
+    },
+    watch: 
+    {
+        reservationDate: function()
+        {
+            this.scrollDate(this.reservationDate)
+        }
     }
 }
 
@@ -146,5 +131,9 @@ export default {
     visibility: hidden
 }
 
+.e-resizable-split-bar
+{
+    visibility: hidden
+}
 
 </style>

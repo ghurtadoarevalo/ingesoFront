@@ -86,7 +86,7 @@
                     <v-btn
                             color="primary"
                             text
-                            @click="dialog = false; onSubmit(); changeReservationAlert()"
+                            @click="onSubmit"
                     >
                         Create Reservation
                     </v-btn>
@@ -194,6 +194,10 @@
                     alert('Please, check that all fills are correctly');
                     return;
                 }
+                if(this.reservation.initialDate < this.isToday()) {
+                    alert('Please, enter valid initial date');
+                    return;
+                }
                 let currentObject = this;
                 let index = this.rooms.indexOf(this.roomNumber);
                 let finalRoom = this.roomIds[index];
@@ -219,6 +223,8 @@
                         alert('Please, fill all spaces');
                         currentObject.output = error;
                 });
+                this.dialog = false;
+                this.changeReservationAlert();
             },
             checkPassport(advalue) {
                 var patt = new RegExp("^([A-Z a-z]){1}([0-9]){7}$");
@@ -260,6 +266,15 @@
                     this.validator = true;
                     alert('Number not valid')
                 }
+            },
+            isToday(){
+                var today = new Date();
+                var dd = String(today.getDate()).padStart(2, '0');
+                var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+                var yyyy = today.getFullYear();
+
+                today = yyyy + '-' + mm + '-' + dd;
+                return today;
             }
         },
 

@@ -9,7 +9,9 @@ export default new Vuex.Store({
 		createdReserve: false,
 		finalReservations: [],
 		dataState: false,
-		reservationDate: ''
+		reservationDate: '',
+		borderDatesRack: ''
+
 	},
 	mutations: {
 		async getRooms(state){	
@@ -20,6 +22,13 @@ export default new Vuex.Store({
 		
 				console.log('Habitaciones cargadas');
 				console.log(state.reservations);
+
+			}catch(err){console.log("En get all all " + err)}
+
+			try{
+				await Axios 
+				.get('http://192.241.158.156:8081/reservation/getInitialAndFinal')
+				.then(response => (state.borderDatesRack = response.data));
 
 			}catch(err){console.log("En get all all " + err)}
 			

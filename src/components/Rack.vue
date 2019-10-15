@@ -29,7 +29,7 @@
                     color = "red lighten-2"
                 ></v-date-picker>
 
-                <v-btn dark color="red lighten-2" @click="scrollDate(picker)"> Search </v-btn>
+                <v-btn dark color="red lighten-2" :disabled="searchDate" @click="scrollDate(picker)"> Search </v-btn>
             </v-dialog>
          </div>
         <div>
@@ -59,7 +59,7 @@ export default {
 		this.$store.dispatch('getRooms')
 	},
     computed: {
-        ...mapState(['finalReservations', 'dataState','reservationDate']),
+        ...mapState(['finalReservations', 'dataState','reservationDate','borderDatesRack']),
     },
 
     data: function() {
@@ -75,6 +75,7 @@ export default {
             disabled: false,
             enableEvents: false,
             dialog: false,
+            searchDate: false,
             selectionSettings: {
                 mode: 'Both',
             },
@@ -104,6 +105,26 @@ export default {
         reservationDate: function()
         {
             this.scrollDate(this.reservationDate)
+        },
+
+        picker: function()
+        {
+            let pickerDate = new Date(this.picker)
+            let initialDate = new Date(this.borderDatesRack.initialDate)
+            let finalDate = new Date(this.borderDatesRack.finalDate)
+
+            if( pickerDate < initialDate ||  pickerDate > finalDate)
+            {
+                let message = "That date isn't inside the Rack, please use dates between: "+ this.borderDatesRack.initialDate + " and " + this.borderDatesRack.finalDate
+                this.searchDate = true
+                alert(message)
+
+            }
+
+            else
+            {
+                this.searchDate = false
+            }
         }
     }
 }

@@ -16,7 +16,8 @@
 
             <v-card>
                 <v-card-title
-                        class="headline grey lighten-2"
+                        class="headline red lighten-2"
+                        style="color:white"
                         primary-title
                 >
                     Create Reservation
@@ -81,7 +82,7 @@
                                     </v-alert>
 
                                 <v-col>
-                                    <v-btn small @click="addRoom">Add Another Room</v-btn>
+                                    <v-btn color="red lighten-2" style="color: white" small @click="addRoom">Add Another Room</v-btn>
                                 </v-col>
 
 
@@ -94,7 +95,7 @@
                 <v-card-actions>
                     <v-spacer></v-spacer>
                     <v-btn
-                            color="primary"
+                            color="red lighten-2"
                             text
                             @click="onSubmit()"
                     >

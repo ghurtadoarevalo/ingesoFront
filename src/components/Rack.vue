@@ -26,9 +26,10 @@
                     :readonly="readonly"
                     :disabled="disabled"
                     :events="enableEvents ? functionEvents : null"
+                    color = "red lighten-2"
                 ></v-date-picker>
 
-                <v-btn dark color="primary" @click="scrollDate(picker)"> Search </v-btn>
+                <v-btn dark color="red lighten-2" @click="scrollDate(picker)"> Search </v-btn>
             </v-dialog>
          </div>
         <div>

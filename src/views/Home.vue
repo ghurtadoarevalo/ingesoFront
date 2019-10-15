@@ -8,7 +8,7 @@
       <v-list dense>
         <v-list-item @click="">
           <v-list-item-action>
-            <v-icon>mdi-view-dashboard</v-icon>
+            <v-icon color="red lighten-2">mdi-view-dashboard</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title>Rack</v-list-item-title>
@@ -23,7 +23,7 @@
       app
       clipped-left
     >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" color="red lighten-2"></v-app-bar-nav-icon>
       <v-toolbar-title>Hotel West Coast </v-toolbar-title>
     </v-app-bar>
 
@@ -39,7 +39,7 @@
           </v-col>
           </v-row>
         </v-alert>
-        <ReservationForm style="margin-left: 80%; margin-bottom: -45px"/>
+        <ReservationForm style="margin-left: 85%; margin-bottom: -45px"/>
         <Rack/>
       </v-container>
     </v-content>

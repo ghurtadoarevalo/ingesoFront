@@ -72,8 +72,18 @@
                                               v-model="roomNumber"
                                               item-value="roomIds"
                                               label="Choose Room"
+                                              no-data-text="Loading rooms..."
                                     ></v-select>
                                 </v-col>
+
+                                    <v-alert v-if="roomAdded" type="success" style="opacity: 0.7;" transition="fade-transition">
+                                        Room Added
+                                    </v-alert>
+
+                                <v-col>
+                                    <v-btn small @click="addRoom">Add Another Room</v-btn>
+                                </v-col>
+
 
                             </v-col>
                         </v-container>
@@ -108,6 +118,7 @@
         data() {
             return {
                 dialog: false,
+                roomAdded: false,
                 reservation: {
                     client: {
                         name: '',
@@ -117,9 +128,7 @@
                     },
                     initialDate: '',
                     finalDate: '',
-                    roomList: [{
-                        roomId: ''
-                    }]
+                    roomList: [{}]
                 },
                 roomType: '',
                 rooms: [],
@@ -281,7 +290,93 @@
 
                 today = yyyy + '-' + mm + '-' + dd;
                 return today;
-            }
+            },
+
+            addRoom() {
+                if(this.reservation.client.name === '') {
+                    alert('Please, enter your name')
+                    return;
+                }
+                if(this.reservation.client.mail === '') {
+                    alert('Please, enter your mail')
+                    return;
+                }
+                if(this.reservation.client.passport === '') {
+                    alert('Please, enter your passport')
+                    return;
+                }
+                if(this.reservation.client.contact === '') {
+                    alert('Please, enter your phone number')
+                    return;
+                }
+                if(this.reservation.initialDate === ''){
+                    alert('Please, enter initial date');
+                    return;
+                }
+                if(this.reservation.finalDate === '') {
+                    alert('Please, enter final date');
+                    return;
+                }
+                if(this.roomNumber === '') {
+                    alert('Please, enter a room number');
+                    return;
+                }
+                if(this.reservation.initialDate > this.reservation.finalDate) {
+                    alert('Please, enter valid dates');
+                    return;
+                }
+                if(this.validator) {
+                    alert('Please, check that all fills are correctly');
+                    return;
+                }
+                if(this.reservation.initialDate < this.isToday()) {
+                    alert('Please, enter valid initial date');
+                    return;
+                }
+                let currentObject = this;
+                let index = this.rooms.indexOf(this.roomNumber);
+                let finalRoom = this.roomIds[index];
+                let newReservation = {
+                    client: {
+                        name: this.reservation.client.name,
+                        mail: this.reservation.client.mail,
+                        contact: this.reservation.client.contact,
+                        passport: this.reservation.client.passport
+                    },
+                    initialDate: this.reservation.initialDate,
+                    finalDate: this.reservation.finalDate,
+                    roomList: [{
+                        roomId: finalRoom
+                    }]
+                };
+
+                axios.post('http://192.241.158.156:8081/reservation/create', newReservation)
+                    .then(function (response) {
+                        currentObject.output = response.data;
+                    })
+                    .catch(function (error) {
+                        alert('Please, fill all spaces');
+                        currentObject.output = error;
+                    });
+
+                this.reservation.initialDate = '';
+                this.reservation.finalDate = '';
+                this.roomNumber = '';
+
+                this.roomAdded = true;
+
+                const interval = setInterval(() => {
+                    this.roomAdded = false;
+                }, 2000);
+            },
+
+            wait(ms) {
+                var start = new Date().getTime();
+                var end = start;
+                while (end < start + ms) {
+                    end = new Date().getTime();
+                }
+            },
         },
 
         computed:
@@ -318,5 +413,22 @@
 <style scoped>
     .required label::after {
         content: "*";
+    }
+
+    .fade-enter {
+        opacity: 0;
+    }
+
+    .fade-enter-active {
+        transition: opacity 1s;
+    }
+
+    .fade-leave {
+
+    }
+
+    .fade-leave-active {
+        transition: opacity 1s;
+        opacity: 0;
     }
 </style>

@@ -287,7 +287,46 @@
             },
 
             addRoom() {
-
+                if(this.reservation.client.name === '') {
+                    alert('Please, enter your name')
+                    return;
+                }
+                if(this.reservation.client.mail === '') {
+                    alert('Please, enter your mail')
+                    return;
+                }
+                if(this.reservation.client.passport === '') {
+                    alert('Please, enter your passport')
+                    return;
+                }
+                if(this.reservation.client.contact === '') {
+                    alert('Please, enter your phone number')
+                    return;
+                }
+                if(this.reservation.initialDate === ''){
+                    alert('Please, enter initial date');
+                    return;
+                }
+                if(this.reservation.finalDate === '') {
+                    alert('Please, enter final date');
+                    return;
+                }
+                if(this.roomNumber === '') {
+                    alert('Please, enter a room number');
+                    return;
+                }
+                if(this.reservation.initialDate > this.reservation.finalDate) {
+                    alert('Please, enter valid dates');
+                    return;
+                }
+                if(this.validator) {
+                    alert('Please, check that all fills are correctly');
+                    return;
+                }
+                if(this.reservation.initialDate < this.isToday()) {
+                    alert('Please, enter valid initial date');
+                    return;
+                }
                 let currentObject = this;
                 let index = this.rooms.indexOf(this.roomNumber);
                 let finalRoom = this.roomIds[index];

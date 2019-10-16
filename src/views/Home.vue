@@ -24,7 +24,7 @@
       clipped-left
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" color="red lighten-2"></v-app-bar-nav-icon>
-      <v-toolbar-title>Hotel West Coast </v-toolbar-title>
+      <v-toolbar-title>Hotel West Coast 2019 </v-toolbar-title>
     </v-app-bar>
 
     <v-content>

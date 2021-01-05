@@ -11,7 +11,7 @@
     "@syncfusion/ej2-vue-gantt": "^17.3.14",
     "@syncfusion/ej2-vue-grids": "^17.3.16",
     "@syncfusion/ej2-vue-schedule": "^17.3.16",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.1",
     "core-js": "^2.6.5",
